@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap');
+      text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      .line-formal {
+        stroke: #1e293b;
+        stroke-width: 1.4;
+        fill: none;
+      }
+      .line-informal {
+        stroke: #94a3b8;
+        stroke-width: 1.4;
+        stroke-dasharray: 4,3.5;
+        fill: none;
+      }
+      .lbl-line {
+        font-size: 5.6px;
+        font-weight: 700;
+        fill: #334155;
+        text-anchor: middle;
+      }
+      .lbl-line-alert {
+        font-size: 5.6px;
+        font-weight: 700;
+        fill: #dc2626;
+        text-anchor: middle;
+      }
+    </style>
+
+    <marker id="f-arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#1e293b" />
+    </marker>
+    <marker id="f-arr-inf" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <!-- Fondo blanco -->
+  <rect x="1" y="1" width="758" height="208" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+
+  <!-- REFERENCIAS DE OPERACIÓN (Bottom-Left) -->
+  <g id="referencias" transform="translate(10, 142)">
+    <rect x="0" y="0" width="126" height="56" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="6" y="10" font-size="6" font-weight="700" fill="#334155" text-transform="uppercase">Referencias</text>
+    
+    <circle cx="12" cy="19" r="4.5" fill="#f1f5f9" stroke="#64748b" stroke-width="1" />
+    <text x="21" y="21" font-size="5.2" font-weight="500" fill="#475569">Generación</text>
+
+    <rect x="68" y="14.5" width="9" height="9" rx="1" fill="#f1f5f9" stroke="#64748b" stroke-width="1" />
+    <text x="81" y="21" font-size="5.2" font-weight="500" fill="#475569">Control</text>
+
+    <rect x="7" y="30" width="10" height="10" rx="1" fill="#f1f5f9" stroke="#64748b" stroke-width="1" />
+    <circle cx="12" cy="35" r="3.2" fill="none" stroke="#64748b" stroke-width="0.8" />
+    <text x="21" y="37.5" font-size="5.2" font-weight="500" fill="#475569">Gen. + Control</text>
+
+    <ellipse cx="72" cy="33" rx="5" ry="1.5" fill="#e2e8f0" stroke="#64748b" stroke-width="0.8" />
+    <path d="M 67 33 L 67 38 C 67 39.5 77 39.5 77 38 L 77 33 Z" fill="#f1f5f9" stroke="#64748b" stroke-width="0.8" />
+    <text x="81" y="37.5" font-size="5.2" font-weight="500" fill="#475569">Almacén</text>
+
+    <line x1="8" y1="48" x2="26" y2="48" class="line-formal" marker-end="url(#f-arr)" />
+    <text x="31" y="50" font-size="5.2" font-weight="600" fill="#1e293b">Formal</text>
+
+    <line x1="68" y1="48" x2="86" y2="48" class="line-informal" marker-end="url(#f-arr-inf)" />
+    <text x="91" y="50" font-size="5.2" font-weight="600" fill="#94a3b8">Informal</text>
+  </g>
+
+  <!-- PERÍMETRO DE LA EMPRESA (Línea punteada) -->
+  <rect x="142" y="38" width="492" height="158" rx="6" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5,4" />
+  <text x="230" y="48" font-size="6.8" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="0.5">"PERÍMETRO" DE LA EMPRESA (GRAN SASSO S.R.L.)</text>
+
+  <!-- ========================================================================
+       LÍNEAS RECTAS / ORTOGONALES Y TEXTOS POR ENCIMA (SIN CORTAR LÍNEAS)
+       ======================================================================== -->
+  
+  <!-- 1. Cliente -> Ventas (Línea horizontal recta) -->
+  <text x="126" y="74" class="lbl-line">WEB / META</text>
+  <line x1="91" y1="80" x2="163" y2="80" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 2. Ventas -> Mauro (Línea horizontal recta) -->
+  <text x="253" y="74" class="lbl-line">EN MANO</text>
+  <line x1="215" y1="80" x2="293" y2="80" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 3. Ventas -> Drive (Línea vertical recta hacia abajo) -->
+  <text x="195" y="126" class="lbl-line" style="text-anchor: start;">DIGITAL</text>
+  <line x1="190" y1="105" x2="190" y2="142" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 4. Drive -> Diseño (Línea horizontal recta) -->
+  <text x="253" y="152" class="lbl-line">CAD DRIVE</text>
+  <line x1="211" y1="158" x2="294" y2="158" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 5. Mauro -> Taller (Línea horizontal recta) -->
+  <text x="388" y="74" class="lbl-line">PAPEL TALLER</text>
+  <line x1="346" y1="80" x2="428" y2="80" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 6. Mauro -> Herrería Hermano (Línea recta a 90° punteada informal) -->
+  <text x="375" y="15" class="lbl-line">WHATSAPP</text>
+  <path d="M 320 54 L 320 20 L 431 20" class="line-informal" marker-end="url(#f-arr-inf)" />
+
+  <!-- 7. Herrería -> Taller (Línea vertical recta hacia abajo) -->
+  <text x="461" y="49" class="lbl-line" style="text-anchor: start; font-size: 5.2px;">ENTREGA 50m</text>
+  <line x1="455" y1="41" x2="455" y2="53" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 8. Diseño -> Taller (Línea recta a 90°) -->
+  <text x="400" y="152" class="lbl-line">RED LOCAL CAM</text>
+  <path d="M 344 158 L 455 158 L 455 107" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 9. Alerta Piezas Rajadas: Taller -> Mauro (Línea recta a 90° punteada informal) -->
+  <text x="385" y="128" class="lbl-line-alert">AVISO VERBAL (FALLAS)</text>
+  <path d="M 436 96 L 436 120 L 320 120 L 320 107" class="line-informal" marker-end="url(#f-arr-inf)" />
+
+  <!-- 10. Taller -> Control Calidad (Línea horizontal recta) -->
+  <text x="520" y="74" class="lbl-line">EN BANCO</text>
+  <line x1="481" y1="80" x2="559" y2="80" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- 11. Control Calidad -> Despacho (Línea horizontal recta) -->
+  <text x="639" y="74" class="lbl-line">REMITO OK</text>
+  <line x1="610" y1="80" x2="668" y2="80" class="line-formal" marker-end="url(#f-arr)" />
+
+  <!-- ========================================================================
+       NODOS DE INFORMACIÓN
+       ======================================================================== -->
+
+  <!-- NODO 1: CLIENTE (Exterior Izquierda) - Generación / Celeste -->
+  <g id="nodo-cliente" transform="translate(65, 80)">
+    <circle cx="0" cy="0" r="26" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.6" />
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#0284c7" stroke-width="1" />
+    <text x="0" y="-6" font-size="7" font-weight="700" fill="#0369a1" text-anchor="middle">PEDIDO</text>
+    <text x="0" y="11" font-size="6.2" font-weight="600" fill="#0284c7" text-anchor="middle">WEB / META</text>
+  </g>
+
+  <!-- NODO 2: VENTAS / ADMIN (Interior) - Generación / Amarillo Ocre -->
+  <g id="nodo-ventas" transform="translate(190, 80)">
+    <circle cx="0" cy="0" r="25" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.6" />
+    <line x1="-19" y1="0" x2="19" y2="0" stroke="#ca8a04" stroke-width="1" />
+    <text x="0" y="-6" font-size="6.8" font-weight="700" fill="#854d0e" text-anchor="middle">ORDEN VTA.</text>
+    <text x="0" y="10" font-size="6" font-weight="600" fill="#a16207" text-anchor="middle">EXCEL</text>
+  </g>
+
+  <!-- NODO 3: ALMACENAMIENTO (Interior) - Cilindro Drive / Gris -->
+  <g id="nodo-drive" transform="translate(190, 158)">
+    <path d="M -21 -6 L -21 10 C -21 15 21 15 21 10 L 21 -6 Z" fill="#f1f5f9" stroke="#64748b" stroke-width="1.2" />
+    <ellipse cx="0" cy="-6" rx="21" ry="5.5" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2" />
+    <path d="M -21 10 C -21 15 21 15 21 10" fill="none" stroke="#64748b" stroke-width="1.2" />
+    <text x="0" y="3.5" font-size="6.5" font-weight="700" fill="#334155" text-anchor="middle">G-DRIVE</text>
+    <text x="0" y="11" font-size="5.2" font-weight="500" fill="#64748b" text-anchor="middle">NUBE</text>
+  </g>
+
+  <!-- NODO 4: DIRECCIÓN / MAURO (Interior) - Gen. + Control / Verde (Círculo en Cuadrado) -->
+  <g id="nodo-mauro" transform="translate(320, 80)">
+    <rect x="-26" y="-26" width="52" height="52" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.6" />
+    <circle cx="0" cy="0" r="21" fill="#dcfce7" stroke="#22c55e" stroke-width="1.2" />
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#16a34a" stroke-width="1" />
+    <text x="0" y="-6" font-size="6.6" font-weight="800" fill="#14532d" text-anchor="middle">PLANILLA</text>
+    <text x="0" y="10" font-size="5.8" font-weight="700" fill="#15803d" text-anchor="middle">PAPEL</text>
+  </g>
+
+  <!-- NODO 5: DISEÑO (Interior) - Generación / Naranja Mostaza -->
+  <g id="nodo-diseno" transform="translate(320, 158)">
+    <circle cx="0" cy="0" r="24" fill="#ffedd5" stroke="#ea580c" stroke-width="1.6" />
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#ea580c" stroke-width="1" />
+    <text x="0" y="-5.5" font-size="6.6" font-weight="700" fill="#9a3412" text-anchor="middle">CÓDIGO CAM</text>
+    <text x="0" y="9.5" font-size="5.8" font-weight="600" fill="#c2410c" text-anchor="middle">ROBOT 3D</text>
+  </g>
+
+  <!-- NODO 6: TALLER / PRODUCCIÓN (Interior) - Generación / Rojo Bordó -->
+  <g id="nodo-taller" transform="translate(455, 80)">
+    <circle cx="0" cy="0" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="1.6" />
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#dc2626" stroke-width="1" />
+    <text x="0" y="-6" font-size="6.8" font-weight="800" fill="#991b1b" text-anchor="middle">HOJA RUTA</text>
+    <text x="0" y="10" font-size="6" font-weight="600" fill="#b91c1c" text-anchor="middle">PISO / PAPEL</text>
+  </g>
+
+  <!-- NODO 7: CONTROL CALIDAD (Interior) - Control / Cuadrado Azul -->
+  <g id="nodo-control" transform="translate(585, 80)">
+    <rect x="-25" y="-25" width="50" height="50" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.6" />
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#2563eb" stroke-width="1" />
+    <text x="0" y="-6" font-size="6.6" font-weight="800" fill="#1e40af" text-anchor="middle">CONTROL</text>
+    <text x="0" y="10" font-size="6" font-weight="600" fill="#2563eb" text-anchor="middle">CHECKLIST</text>
+  </g>
+
+  <!-- NODO 8: HERRERÍA HERMANO (Exterior Arriba) - Violeta / Proveedor -->
+  <g id="nodo-herreria" transform="translate(455, 22)">
+    <circle cx="0" cy="0" r="23" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" />
+    <line x1="-17" y1="0" x2="17" y2="0" stroke="#7c3aed" stroke-width="1" />
+    <text x="0" y="-5" font-size="6.2" font-weight="700" fill="#5b21b6" text-anchor="middle">PED. BASES</text>
+    <text x="0" y="9" font-size="5.4" font-weight="600" fill="#6d28d9" text-anchor="middle">WHATSAPP</text>
+  </g>
+
+  <!-- NODO 9: CLIENTE / DESPACHO (Exterior Derecha) - Violeta Oscuro / Distribución -->
+  <g id="nodo-despacho" transform="translate(695, 80)">
+    <circle cx="0" cy="0" r="26" fill="#fdf4ff" stroke="#a21caf" stroke-width="1.6" />
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#a21caf" stroke-width="1" />
+    <text x="0" y="-6" font-size="7" font-weight="800" fill="#701a75" text-anchor="middle">REMITO</text>
+    <text x="0" y="10.5" font-size="6.2" font-weight="600" fill="#86198f" text-anchor="middle">SILLA / FLETE</text>
+  </g>
+</svg>

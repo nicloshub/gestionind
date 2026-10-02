@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exportador de Organigrama Gran Sasso | Gestión Industrial TP4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --primary: #2dd4bf;
+      --primary-hover: #14b8a6;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      text-align: center;
+      max-width: 820px;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .container {
+      width: 100%;
+      max-width: 860px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .control-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pill-select {
+      display: flex;
+      background: #0f172a;
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .pill-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pill-btn.active {
+      background: var(--primary);
+      color: #042f2e;
+    }
+    .preview-section {
+      background: #cbd5e1;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .preview-info {
+      align-self: flex-start;
+      margin-bottom: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-a4 {
+      background: #1e293b;
+      color: #38bdf8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+    }
+    /* Marco exacto de la hoja A4 */
+    .a4-frame-simulation {
+      width: 100%;
+      max-width: 760px;
+      height: 215px;
+      background: #ffffff;
+      border: 2px dashed #94a3b8;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .a4-frame-simulation svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .action-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #042f2e;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 0 15px rgba(45, 212, 191, 0.4);
+    }
+    .btn-secondary {
+      background: #334155;
+      color: #ffffff;
+      border-color: #475569;
+    }
+    .btn-secondary:hover {
+      background: #475569;
+    }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: #334155;
+    }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10b981;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .instructions-card {
+      margin-top: 20px;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .instructions-card code {
+      background: #1e293b;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Exportador del Organigrama Reconstruido</h1>
+    <p>Gran Sasso S.R.L. · Estructura exacta adaptada al marco de 210px de la Página 2 (A4)</p>
+  </div>
+
+  <div class="container">
+    <div class="controls">
+      <div class="control-group">
+        <label>Variante de Diseño:</label>
+        <div class="pill-select">
+          <button class="pill-btn active" id="btn-var-compact" onclick="setVariant('compact')">Proporcional (2 Filas Puestos)</button>
+          <button class="pill-btn" id="btn-var-linear" onclick="setVariant('linear')">Lineal (1 Fila como Boceto)</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Rótulos de Puestos:</label>
+        <div class="pill-select">
+          <button class="pill-btn active" id="btn-lbl-rep" onclick="setLabels('repetido')">Puesto 1 (x9)</button>
+          <button class="pill-btn" id="btn-lbl-num" onclick="setLabels('numerado')">Puesto 1 al 9</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <div class="preview-info">
+        <span class="badge-a4">PREVISUALIZACIÓN ESCALA 1:1</span>
+        <span>Simulación dentro del marco <code>#frame-organigrama</code> (760px × 210px)</span>
+      </div>
+
+      <div class="a4-frame-simulation" id="svg-container">
+        <!-- El SVG se renderiza dinámicamente aquí -->
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn btn-primary" onclick="downloadPNG()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Descargar Imagen PNG (HD)
+      </button>
+
+      <button class="btn btn-secondary" onclick="downloadSVG()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        Descargar Archivo SVG
+      </button>
+
+      <button class="btn btn-outline" onclick="copySVGCode()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        Copiar Código SVG
+      </button>
+    </div>
+
+    <div class="instructions-card">
+      <strong>💡 ¿Cómo insertarlo en tu página sin tocar código a mano?</strong><br>
+      • <strong>Opción A (Arrastrar y pegar):</strong> Hacé clic en <em>"Descargar Imagen PNG"</em>, abrí el <code>index.html</code> en tu navegador, hacé clic dentro del recuadro del organigrama en la página 2 y pegala (Ctrl+V) o arrastrala.<br>
+      • <strong>Opción B (Etiqueta HTML limpia):</strong> Copiá el archivo guardado como <code>assets/organigrama_reconstruido.svg</code> y pegá: <code>&lt;img src="assets/organigrama_reconstruido.svg" style="max-height:100%; max-width:100%;"&gt;</code>.
+    </div>
+  </div>
+
+  <div class="toast" id="toast">¡Código copiado al portapapeles!</div>
+
+  <canvas id="export-canvas" style="display: none;"></canvas>
+
+  <script>
+    let currentVariant = 'compact';
+    let currentLabels = 'repetido';
+
+    function getLabelsArray() {
+      if (currentLabels === 'numerado') {
+        return ['Puesto 1', 'Puesto 2', 'Puesto 3', 'Puesto 4', 'Puesto 5', 'Puesto 6', 'Puesto 7', 'Puesto 8', 'Puesto 9'];
+      }
+      return Array(9).fill('Puesto 1');
+    }
+
+    function generateSVG(variant, labelMode) {
+      const lbls = labelMode === 'numerado' 
+        ? ['Puesto 1', 'Puesto 2', 'Puesto 3', 'Puesto 4', 'Puesto 5', 'Puesto 6', 'Puesto 7', 'Puesto 8', 'Puesto 9']
+        : Array(9).fill('Puesto 1');
+
+      if (variant === 'compact') {
+        return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .node-green { fill: #dcfce7; stroke: #4ade80; stroke-width: 1.2; }
+      .node-green-leaf { fill: #ecfdf5; stroke: #86efac; stroke-width: 1; }
+      .node-teal { fill: #2dd4bf; stroke: #0d9488; stroke-width: 1.3; }
+      .line-trunk { stroke: #64748b; stroke-width: 1.3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line-carpinteria { stroke: #0d9488; stroke-width: 1.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arr-m" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#64748b" />
+    </marker>
+    <marker id="arr-teal-m" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#0d9488" />
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="208" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <rect x="8" y="7" width="38" height="15" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+  <text x="27" y="17.5" font-size="7" font-weight="600" fill="#64748b" text-anchor="middle">Mapa</text>
+
+  <!-- Nivel 1: Director General -->
+  <rect x="305" y="8" width="114" height="26" rx="5" class="node-green" />
+  <text x="362" y="19" font-size="7.5" font-weight="700" fill="#14532d" text-anchor="middle">Director General</text>
+  <text x="362" y="28.5" font-size="6.8" font-weight="500" fill="#166534" text-anchor="middle">Mauro</text>
+
+  <path d="M 362 34 L 362 44 M 142 44 L 565 44" class="line-trunk" />
+
+  <!-- Nivel 2: Ramas Principales -->
+  <path d="M 142 44 L 142 52" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="82" y="52" width="120" height="22" rx="4" class="node-green" />
+  <text x="142" y="66.5" font-size="7.4" font-weight="700" fill="#14532d" text-anchor="middle">Administradora General</text>
+
+  <path d="M 345 44 L 345 52" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="318" y="52" width="54" height="22" rx="4" class="node-green" />
+  <text x="345" y="66.5" font-size="7.4" font-weight="700" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <path d="M 565 44 L 565 52" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="505" y="52" width="120" height="22" rx="4" class="node-green" />
+  <text x="565" y="66.5" font-size="7.4" font-weight="700" fill="#14532d" text-anchor="middle">Control de Planta</text>
+
+  <!-- Rama Administración -->
+  <path d="M 142 74 L 142 84 M 72 84 L 212 84" class="line-trunk" />
+  
+  <path d="M 72 84 L 72 92" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="38" y="92" width="68" height="20" rx="4" class="node-teal" />
+  <text x="72" y="105.5" font-size="7.5" font-weight="700" fill="#042f2e" text-anchor="middle">Redes</text>
+
+  <path d="M 72 112 L 72 120 M 42 120 L 102 120" class="line-trunk" />
+  <path d="M 42 120 L 42 128" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="18" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="42" y="140" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <path d="M 102 120 L 102 128" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="76" y="128" width="52" height="18" rx="3" class="node-green-leaf" />
+  <text x="102" y="140" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Marketing</text>
+
+  <path d="M 212 84 L 212 92" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="178" y="92" width="68" height="20" rx="4" class="node-teal" />
+  <text x="212" y="105.5" font-size="7.5" font-weight="700" fill="#042f2e" text-anchor="middle">Ventas</text>
+
+  <path d="M 212 112 L 212 120 M 182 120 L 242 120" class="line-trunk" />
+  <path d="M 182 120 L 182 128" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="156" y="128" width="52" height="18" rx="3" class="node-green-leaf" />
+  <text x="182" y="140" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Minoristas</text>
+
+  <path d="M 242 120 L 242 128" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="216" y="128" width="52" height="18" rx="3" class="node-green-leaf" />
+  <text x="242" y="140" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Mayoristas</text>
+
+  <!-- Rama Control de Planta -->
+  <path d="M 565 74 L 565 84 M 430 84 L 715 84" class="line-trunk" />
+
+  <path d="M 430 84 L 430 92" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="368" y="92" width="124" height="25" rx="4" class="node-teal" />
+  <text x="430" y="103.5" font-size="7.5" font-weight="700" fill="#042f2e" text-anchor="middle">Carpintería</text>
+  <text x="430" y="112.5" font-size="6.2" font-weight="500" fill="#0f766e" text-anchor="middle">Puestos rotativos</text>
+
+  <!-- Fila 1 de Puestos -->
+  <path d="M 430 117 L 430 124 M 310 124 L 550 124" class="line-carpinteria" />
+  <path d="M 310 124 L 310 130" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="290" y="130" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="310" y="141.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[0]}</text>
+
+  <path d="M 370 124 L 370 130" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="350" y="130" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="370" y="141.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[1]}</text>
+
+  <path d="M 430 124 L 430 130" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="410" y="130" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="430" y="141.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[2]}</text>
+
+  <path d="M 490 124 L 490 130" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="470" y="130" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="490" y="141.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[3]}</text>
+
+  <path d="M 550 124 L 550 130" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="530" y="130" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="550" y="141.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[4]}</text>
+
+  <!-- Fila 2 de Puestos -->
+  <path d="M 430 147 L 430 156 M 340 156 L 520 156" class="line-carpinteria" />
+  <path d="M 340 156 L 340 162" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="320" y="162" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="340" y="173.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[5]}</text>
+
+  <path d="M 400 156 L 400 162" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="380" y="162" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="400" y="173.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[6]}</text>
+
+  <path d="M 460 156 L 460 162" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="440" y="162" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="460" y="173.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[7]}</text>
+
+  <path d="M 520 156 L 520 162" class="line-carpinteria" marker-end="url(#arr-teal-m)" />
+  <rect x="500" y="162" width="40" height="17" rx="3" class="node-green-leaf" />
+  <text x="520" y="173.5" font-size="6.5" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[8]}</text>
+
+  <!-- Puestos Especiales -->
+  <path d="M 610 84 L 610 130" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="588" y="130" width="44" height="22" rx="3" class="node-green-leaf" />
+  <text x="610" y="144" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Tapicería</text>
+
+  <path d="M 665 84 L 665 130" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="646" y="130" width="38" height="22" rx="3" class="node-green-leaf" />
+  <text x="665" y="144" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">CNC</text>
+
+  <path d="M 715 84 L 715 130" class="line-trunk" marker-end="url(#arr-m)" />
+  <rect x="694" y="130" width="42" height="22" rx="3" class="node-green-leaf" />
+  <text x="715" y="144" font-size="6.8" font-weight="600" fill="#14532d" text-anchor="middle">Pintura</text>
+</svg>`;
+      } else {
+        return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      .node-green { fill: #dcfce7; stroke: #4ade80; stroke-width: 1.2; }
+      .node-green-leaf { fill: #ecfdf5; stroke: #86efac; stroke-width: 1; }
+      .node-teal { fill: #2dd4bf; stroke: #0d9488; stroke-width: 1.3; }
+      .line-trunk { stroke: #64748b; stroke-width: 1.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .line-carpinteria { stroke: #0d9488; stroke-width: 1.1; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+    <marker id="arr-l" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#64748b" />
+    </marker>
+    <marker id="arr-teal-l" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#0d9488" />
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="188" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+  <rect x="8" y="7" width="38" height="15" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+  <text x="27" y="17.5" font-size="7" font-weight="600" fill="#64748b" text-anchor="middle">Mapa</text>
+
+  <rect x="305" y="8" width="114" height="26" rx="5" class="node-green" />
+  <text x="362" y="19" font-size="7.5" font-weight="700" fill="#14532d" text-anchor="middle">Director General</text>
+  <text x="362" y="28.5" font-size="6.8" font-weight="500" fill="#166534" text-anchor="middle">Mauro</text>
+
+  <path d="M 362 34 L 362 44 M 130 44 L 540 44" class="line-trunk" />
+
+  <path d="M 130 44 L 130 52" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="75" y="52" width="110" height="22" rx="4" class="node-green" />
+  <text x="130" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Administradora General</text>
+
+  <path d="M 330 44 L 330 52" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="306" y="52" width="48" height="22" rx="4" class="node-green" />
+  <text x="330" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <path d="M 540 44 L 540 52" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="485" y="52" width="110" height="22" rx="4" class="node-green" />
+  <text x="540" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Control de Planta</text>
+
+  <!-- Rama Administración -->
+  <path d="M 130 74 L 130 84 M 68 84 L 192 84" class="line-trunk" />
+  <path d="M 68 84 L 68 92" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="36" y="92" width="64" height="20" rx="4" class="node-teal" />
+  <text x="68" y="105.5" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Redes</text>
+
+  <path d="M 68 112 L 68 120 M 40 120 L 96 120" class="line-trunk" />
+  <path d="M 40 120 L 40 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="18" y="128" width="44" height="18" rx="3" class="node-green-leaf" />
+  <text x="40" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <path d="M 96 120 L 96 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="72" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="96" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Marketing</text>
+
+  <path d="M 192 84 L 192 92" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="160" y="92" width="64" height="20" rx="4" class="node-teal" />
+  <text x="192" y="105.5" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Ventas</text>
+
+  <path d="M 192 112 L 192 120 M 164 120 L 220 120" class="line-trunk" />
+  <path d="M 164 120 L 164 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="140" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="164" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Minoristas</text>
+
+  <path d="M 220 120 L 220 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="196" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="220" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Mayoristas</text>
+
+  <!-- Rama Control de Planta -->
+  <path d="M 540 74 L 540 84 M 430 84 L 726 84" class="line-trunk" />
+  <path d="M 430 84 L 430 92" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="375" y="92" width="110" height="24" rx="4" class="node-teal" />
+  <text x="430" y="103" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Carpintería</text>
+  <text x="430" y="112" font-size="6" font-weight="500" fill="#0f766e" text-anchor="middle">Puestos rotativos</text>
+
+  <path d="M 430 116 L 430 122 M 284 122 L 564 122" class="line-carpinteria" />
+
+  <!-- 9 Puestos en 1 fila -->
+  ${[284, 319, 354, 389, 424, 459, 494, 529, 564].map((x, i) => `
+  <path d="M ${x} 122 L ${x} 128" class="line-carpinteria" marker-end="url(#arr-teal-l)" />
+  <rect x="${x - 14}" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="${x}" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">${lbls[i]}</text>
+  `).join('')}
+
+  <!-- Especialidades -->
+  <path d="M 618 84 L 618 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="596" y="128" width="44" height="18" rx="3" class="node-green-leaf" />
+  <text x="618" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">Tapicería</text>
+
+  <path d="M 672 84 L 672 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="653" y="128" width="38" height="18" rx="3" class="node-green-leaf" />
+  <text x="672" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">CNC</text>
+
+  <path d="M 726 84 L 726 128" class="line-trunk" marker-end="url(#arr-l)" />
+  <rect x="707" y="128" width="38" height="18" rx="3" class="node-green-leaf" />
+  <text x="726" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">Pintura</text>
+</svg>`;
+      }
+    }
+
+    function render() {
+      const container = document.getElementById('svg-container');
+      container.innerHTML = generateSVG(currentVariant, currentLabels);
+    }
+
+    function setVariant(v) {
+      currentVariant = v;
+      document.getElementById('btn-var-compact').classList.toggle('active', v === 'compact');
+      document.getElementById('btn-var-linear').classList.toggle('active', v === 'linear');
+      render();
+    }
+
+    function setLabels(l) {
+      currentLabels = l;
+      document.getElementById('btn-lbl-rep').classList.toggle('active', l === 'repetido');
+      document.getElementById('btn-lbl-num').classList.toggle('active', l === 'numerado');
+      render();
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    function copySVGCode() {
+      const svgCode = generateSVG(currentVariant, currentLabels);
+      navigator.clipboard.writeText(svgCode).then(() => {
+        showToast('¡Código SVG copiado al portapapeles!');
+      });
+    }
+
+    function downloadSVG() {
+      const svgCode = generateSVG(currentVariant, currentLabels);
+      const blob = new Blob([svgCode], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `organigrama_gran_sasso_${currentVariant}.svg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Descargando archivo SVG...');
+    }
+
+    function downloadPNG() {
+      const svgCode = generateSVG(currentVariant, currentLabels);
+      const canvas = document.getElementById('export-canvas');
+      const ctx = canvas.getContext('2d');
+      
+      const scale = 3; // 3x para nitidez HD en impresión
+      const width = currentVariant === 'compact' ? 760 : 760;
+      const height = currentVariant === 'compact' ? 210 : 190;
+      
+      canvas.width = width * scale;
+      canvas.height = height * scale;
+
+      const img = new Image();
+      const svgBlob = new Blob([svgCode], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+
+      img.onload = function() {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+
+        canvas.toBlob(function(blob) {
+          const pngUrl = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = pngUrl;
+          a.download = `organigrama_gran_sasso_${currentVariant}_HD.png`;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(pngUrl);
+          showToast('Descargando imagen PNG en alta resolución (300 DPI)...');
+        }, 'image/png');
+      };
+      img.src = url;
+    }
+
+    // Inicializar
+    render();
+  </script>
+</body>
+</html>

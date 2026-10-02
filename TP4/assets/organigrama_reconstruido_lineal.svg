@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&amp;display=swap');
+      text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      .node-green {
+        fill: #dcfce7;
+        stroke: #4ade80;
+        stroke-width: 1.2;
+      }
+      .node-green-leaf {
+        fill: #ecfdf5;
+        stroke: #86efac;
+        stroke-width: 1;
+      }
+      .node-teal {
+        fill: #2dd4bf;
+        stroke: #0d9488;
+        stroke-width: 1.3;
+      }
+      .line-trunk {
+        stroke: #64748b;
+        stroke-width: 1.2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .line-carpinteria {
+        stroke: #0d9488;
+        stroke-width: 1.1;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+
+    <marker id="arr" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#64748b" />
+    </marker>
+
+    <marker id="arr-teal" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#0d9488" />
+    </marker>
+  </defs>
+
+  <!-- Fondo blanco contenedor -->
+  <rect x="1" y="1" width="758" height="188" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+
+  <!-- Etiqueta superior "Mapa" -->
+  <rect x="8" y="7" width="38" height="15" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+  <text x="27" y="17.5" font-size="7" font-weight="600" fill="#64748b" text-anchor="middle">Mapa</text>
+
+  <!-- NIVEL 1: DIRECTOR GENERAL MAURO -->
+  <rect x="305" y="8" width="114" height="26" rx="5" class="node-green" />
+  <text x="362" y="19" font-size="7.5" font-weight="700" fill="#14532d" text-anchor="middle">Director General</text>
+  <text x="362" y="28.5" font-size="6.8" font-weight="500" fill="#166534" text-anchor="middle">Mauro</text>
+
+  <!-- Tronco central de bajada -->
+  <path d="M 362 34 L 362 44 M 130 44 L 540 44" class="line-trunk" />
+
+  <!-- NIVEL 2: RAMAS PRINCIPALES -->
+  <!-- 1. Administradora General -->
+  <path d="M 130 44 L 130 52" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="75" y="52" width="110" height="22" rx="4" class="node-green" />
+  <text x="130" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Administradora General</text>
+
+  <!-- 2. Diseño Central -->
+  <path d="M 330 44 L 330 52" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="306" y="52" width="48" height="22" rx="4" class="node-green" />
+  <text x="330" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <!-- 3. Control de Planta -->
+  <path d="M 540 44 L 540 52" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="485" y="52" width="110" height="22" rx="4" class="node-green" />
+  <text x="540" y="66.5" font-size="7.2" font-weight="700" fill="#14532d" text-anchor="middle">Control de Planta</text>
+
+  <!-- RAMA IZQUIERDA: ADMINISTRACIÓN -->
+  <path d="M 130 74 L 130 84 M 68 84 L 192 84" class="line-trunk" />
+
+  <!-- Redes -->
+  <path d="M 68 84 L 68 92" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="36" y="92" width="64" height="20" rx="4" class="node-teal" />
+  <text x="68" y="105.5" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Redes</text>
+
+  <!-- Redes -> Diseño y Marketing -->
+  <path d="M 68 112 L 68 120 M 40 120 L 96 120" class="line-trunk" />
+  <path d="M 40 120 L 40 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="18" y="128" width="44" height="18" rx="3" class="node-green-leaf" />
+  <text x="40" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Diseño</text>
+
+  <path d="M 96 120 L 96 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="72" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="96" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Marketing</text>
+
+  <!-- Ventas -->
+  <path d="M 192 84 L 192 92" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="160" y="92" width="64" height="20" rx="4" class="node-teal" />
+  <text x="192" y="105.5" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Ventas</text>
+
+  <!-- Ventas -> Minoristas y Mayoristas -->
+  <path d="M 192 112 L 192 120 M 164 120 L 220 120" class="line-trunk" />
+  <path d="M 164 120 L 164 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="140" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="164" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Minoristas</text>
+
+  <path d="M 220 120 L 220 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="196" y="128" width="48" height="18" rx="3" class="node-green-leaf" />
+  <text x="220" y="140" font-size="6.6" font-weight="600" fill="#14532d" text-anchor="middle">Mayoristas</text>
+
+  <!-- RAMA DERECHA: CONTROL DE PLANTA -->
+  <path d="M 540 74 L 540 84 M 430 84 L 726 84" class="line-trunk" />
+
+  <!-- Carpintería Puestos Rotativos -->
+  <path d="M 430 84 L 430 92" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="375" y="92" width="110" height="24" rx="4" class="node-teal" />
+  <text x="430" y="103" font-size="7.4" font-weight="700" fill="#042f2e" text-anchor="middle">Carpintería</text>
+  <text x="430" y="112" font-size="6" font-weight="500" fill="#0f766e" text-anchor="middle">Puestos rotativos</text>
+
+  <!-- Bus bar de Carpintería a los 9 puestos -->
+  <path d="M 430 116 L 430 122 M 284 122 L 564 122" class="line-carpinteria" />
+
+  <!-- Los 9 puestos en una fila horizontal (exacto a la imagen del usuario) -->
+  <!-- 1 -->
+  <path d="M 284 122 L 284 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="270" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="284" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 2 -->
+  <path d="M 319 122 L 319 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="305" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="319" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 3 -->
+  <path d="M 354 122 L 354 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="340" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="354" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 4 -->
+  <path d="M 389 122 L 389 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="375" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="389" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 5 -->
+  <path d="M 424 122 L 424 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="410" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="424" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 6 -->
+  <path d="M 459 122 L 459 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="445" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="459" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 7 -->
+  <path d="M 494 122 L 494 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="480" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="494" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 8 -->
+  <path d="M 529 122 L 529 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="515" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="529" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- 9 -->
+  <path d="M 564 122 L 564 128" class="line-carpinteria" marker-end="url(#arr-teal)" />
+  <rect x="550" y="128" width="28" height="18" rx="3" class="node-green-leaf" />
+  <text x="564" y="140" font-size="5.8" font-weight="600" fill="#14532d" text-anchor="middle">Puesto 1</text>
+
+  <!-- Especialidades directas de Control de Planta (en la misma línea inferior) -->
+  <!-- Tapicería -->
+  <path d="M 618 84 L 618 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="596" y="128" width="44" height="18" rx="3" class="node-green-leaf" />
+  <text x="618" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">Tapicería</text>
+
+  <!-- CNC -->
+  <path d="M 672 84 L 672 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="653" y="128" width="38" height="18" rx="3" class="node-green-leaf" />
+  <text x="672" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">CNC</text>
+
+  <!-- Pintura -->
+  <path d="M 726 84 L 726 128" class="line-trunk" marker-end="url(#arr)" />
+  <rect x="707" y="128" width="38" height="18" rx="3" class="node-green-leaf" />
+  <text x="726" y="140" font-size="6.4" font-weight="600" fill="#14532d" text-anchor="middle">Pintura</text>
+</svg>

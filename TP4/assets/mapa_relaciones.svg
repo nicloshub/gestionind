@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&amp;display=swap');
+      text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      .c-internal-lead {
+        fill: #dcfce7;
+        stroke: #22c55e;
+        stroke-width: 1.8;
+      }
+      .c-internal {
+        fill: #ecfdf5;
+        stroke: #10b981;
+        stroke-width: 1.5;
+      }
+      .c-external {
+        fill: #f8fafc;
+        stroke: #64748b;
+        stroke-width: 1.4;
+      }
+      .c-external-strong {
+        fill: #f0fdfa;
+        stroke: #0d9488;
+        stroke-width: 1.6;
+      }
+      .line-simple {
+        stroke: #64748b;
+        stroke-width: 1.4;
+        fill: none;
+      }
+      .line-strong {
+        stroke: #0f172a;
+        stroke-width: 2.4;
+        fill: none;
+      }
+      .line-esporadica {
+        stroke: #94a3b8;
+        stroke-width: 1.4;
+        stroke-dasharray: 4,4;
+        fill: none;
+      }
+    </style>
+
+    <marker id="arr-s" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#64748b" />
+    </marker>
+    <marker id="arr-s-start" viewBox="0 0 6 6" refX="1" refY="3" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 5 1 L 0 3 L 5 5 z" fill="#64748b" />
+    </marker>
+
+    <marker id="arr-st" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0.8 L 5 3 L 0 5.2 z" fill="#0f172a" />
+    </marker>
+    <marker id="arr-st-start" viewBox="0 0 6 6" refX="1" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 5 0.8 L 0 3 L 5 5.2 z" fill="#0f172a" />
+    </marker>
+
+    <marker id="arr-esp" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M 0 1 L 5 3 L 0 5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="758" height="208" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+
+  <!-- REFERENCIAS DE CATEDRA -->
+  <g id="referencias" transform="translate(14, 12)">
+    <rect x="0" y="0" width="146" height="48" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="8" y="11.5" font-size="6.8" font-weight="700" fill="#334155" text-transform="uppercase">Referencias de Vínculo</text>
+    
+    <line x1="10" y1="23" x2="32" y2="23" class="line-simple" marker-end="url(#arr-s)" />
+    <text x="38" y="25.5" font-size="6.4" font-weight="500" fill="#64748b">Simple</text>
+
+    <line x1="82" y1="23" x2="104" y2="23" class="line-simple" marker-start="url(#arr-s-start)" marker-end="url(#arr-s)" />
+    <text x="110" y="25.5" font-size="6.4" font-weight="500" fill="#64748b">Mutua</text>
+
+    <line x1="10" y1="38" x2="32" y2="38" class="line-strong" marker-start="url(#arr-st-start)" marker-end="url(#arr-st)" />
+    <text x="38" y="40.5" font-size="6.4" font-weight="700" fill="#0f172a">Fuerte</text>
+
+    <line x1="82" y1="38" x2="104" y2="38" class="line-esporadica" marker-end="url(#arr-esp)" />
+    <text x="110" y="40.5" font-size="6.4" font-weight="500" fill="#94a3b8">Esporádica</text>
+  </g>
+
+  <!-- PERIMETRO DE LA EMPRESA -->
+  <ellipse cx="388" cy="112" rx="156" ry="86" fill="none" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5,4" />
+  <text x="388" y="20" font-size="7.5" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="0.5">"PERÍMETRO" DE LA EMPRESA (GRAN SASSO S.R.L.)</text>
+
+  <!-- LINEAS DE VINCULACION EXTERNAS E INTERNAS -->
+  
+  <!-- 1. Misiones a Mauro: linea directa esporadica y limpia -->
+  <line x1="235" y1="68" x2="338" y2="68" class="line-esporadica" marker-end="url(#arr-esp)" />
+
+  <!-- 2. Herreria a Mauro: fuerte mutua -->
+  <line x1="231" y1="126" x2="346" y2="85" class="line-strong" marker-start="url(#arr-st-start)" marker-end="url(#arr-st)" />
+
+  <!-- 3. Cluster a Herreria -->
+  <line x1="97" y1="145" x2="175" y2="145" class="line-simple" marker-end="url(#arr-s)" />
+
+  <!-- 4. Herreria a Admin (mutua) -->
+  <line x1="237" y1="145" x2="280" y2="145" class="line-simple" marker-start="url(#arr-s-start)" marker-end="url(#arr-s)" />
+
+  <!-- 5. Mauro a Clientes B2C: fuerte mutua -->
+  <line x1="412" y1="68" x2="634" y2="68" class="line-strong" marker-start="url(#arr-st-start)" marker-end="url(#arr-st)" />
+
+  <!-- 6. Mauro a Taller: fuerte mutua interna -->
+  <line x1="400" y1="92" x2="442" y2="118" class="line-strong" marker-start="url(#arr-st-start)" marker-end="url(#arr-st)" />
+
+  <!-- 7. Mauro a Admin: mutua interna -->
+  <line x1="352" y1="96" x2="326" y2="120" class="line-simple" marker-start="url(#arr-s-start)" marker-end="url(#arr-s)" />
+
+  <!-- 8. Mauro a Diseno: simple vertical -->
+  <line x1="385" y1="104" x2="385" y2="128" class="line-simple" marker-end="url(#arr-s)" />
+
+  <!-- 9. Admin a Diseno y Taller: mutua interna -->
+  <line x1="340" y1="145" x2="359" y2="148" class="line-simple" marker-start="url(#arr-s-start)" marker-end="url(#arr-s)" />
+  <line x1="411" y1="150" x2="430" y2="145" class="line-simple" marker-start="url(#arr-s-start)" marker-end="url(#arr-s)" />
+
+  <!-- 10. Taller a Clientes B2B: simple externa -->
+  <line x1="500" y1="142" x2="638" y2="146" class="line-simple" marker-end="url(#arr-s)" />
+
+  <!-- 11. Taller a Costurera: esporadica -->
+  <line x1="488" y1="166" x2="532" y2="178" class="line-esporadica" marker-end="url(#arr-esp)" />
+
+  <!-- ACTORES INTERNOS -->
+  
+  <!-- Mauro -->
+  <g id="actor-mauro">
+    <circle cx="375" cy="68" r="35" class="c-internal-lead" />
+    <line x1="347" y1="68" x2="403" y2="68" stroke="#22c55e" stroke-width="1.2" />
+    <text x="375" y="60.5" font-size="8.8" font-weight="800" fill="#14532d" text-anchor="middle">MAURO</text>
+    <text x="375" y="80.5" font-size="7.4" font-weight="700" fill="#166534" text-anchor="middle">DUEÑO / DIR.</text>
+  </g>
+
+  <!-- Admin y Ventas -->
+  <g id="actor-admin">
+    <circle cx="310" cy="145" r="29" class="c-internal" />
+    <line x1="287" y1="145" x2="333" y2="145" stroke="#10b981" stroke-width="1" />
+    <text x="310" y="137" font-size="7.6" font-weight="700" fill="#042f2e" text-anchor="middle">ADMIN.</text>
+    <text x="310" y="155" font-size="6.5" font-weight="600" fill="#0f766e" text-anchor="middle">VENTAS / WEB</text>
+  </g>
+
+  <!-- Diseno -->
+  <g id="actor-diseno">
+    <circle cx="385" cy="155" r="25" class="c-internal" />
+    <line x1="365" y1="155" x2="405" y2="155" stroke="#10b981" stroke-width="1" />
+    <text x="385" y="148" font-size="7.2" font-weight="700" fill="#042f2e" text-anchor="middle">DISEÑO</text>
+    <text x="385" y="164" font-size="6.2" font-weight="600" fill="#0f766e" text-anchor="middle">CAD / CAM</text>
+  </g>
+
+  <!-- Taller y Produccion -->
+  <g id="actor-taller">
+    <circle cx="465" cy="138" r="34" class="c-internal" />
+    <line x1="438" y1="138" x2="492" y2="138" stroke="#10b981" stroke-width="1.1" />
+    <text x="465" y="129.5" font-size="8.4" font-weight="800" fill="#042f2e" text-anchor="middle">TALLER</text>
+    <text x="465" y="149.5" font-size="7.2" font-weight="600" fill="#0f766e" text-anchor="middle">PRODUCCIÓN</text>
+  </g>
+
+  <!-- ACTORES EXTERNOS -->
+  
+  <!-- Prov. Misiones -->
+  <g id="actor-misiones">
+    <circle cx="206" cy="68" r="28" class="c-external" />
+    <line x1="184" y1="68" x2="228" y2="68" stroke="#64748b" stroke-width="1" />
+    <text x="206" y="60.5" font-size="7.4" font-weight="700" fill="#1e293b" text-anchor="middle">MISIONES</text>
+    <text x="206" y="77" font-size="6.2" font-weight="600" fill="#64748b" text-anchor="middle">LÁMINAS CHAPA</text>
+  </g>
+
+  <!-- Herreria del Hermano -->
+  <g id="actor-herreria">
+    <circle cx="206" cy="145" r="30" class="c-external-strong" />
+    <line x1="182" y1="145" x2="230" y2="145" stroke="#0d9488" stroke-width="1.1" />
+    <text x="206" y="137" font-size="7.8" font-weight="800" fill="#0f766e" text-anchor="middle">HERRERÍA</text>
+    <text x="206" y="154" font-size="6.4" font-weight="700" fill="#0d9488" text-anchor="middle">HERMANO (50m)</text>
+  </g>
+
+  <!-- Cluster San Martin -->
+  <g id="actor-cluster">
+    <circle cx="68" cy="145" r="28" class="c-external" />
+    <line x1="46" y1="145" x2="90" y2="145" stroke="#64748b" stroke-width="1" />
+    <text x="68" y="137.5" font-size="7.2" font-weight="700" fill="#1e293b" text-anchor="middle">CLÚSTER SM</text>
+    <text x="68" y="153.5" font-size="6.1" font-weight="600" fill="#64748b" text-anchor="middle">METAL / PINTURA</text>
+  </g>
+
+  <!-- Clientes B2C Meta -->
+  <g id="actor-b2c">
+    <circle cx="668" cy="68" r="33" class="c-external-strong" />
+    <line x1="640" y1="68" x2="696" y2="68" stroke="#0d9488" stroke-width="1.1" />
+    <text x="668" y="59.5" font-size="8.2" font-weight="800" fill="#0f766e" text-anchor="middle">CLIENTES B2C</text>
+    <text x="668" y="79.5" font-size="7.2" font-weight="600" fill="#0d9488" text-anchor="middle">REDES / META</text>
+  </g>
+
+  <!-- Clientes B2B Curvados -->
+  <g id="actor-b2b">
+    <circle cx="668" cy="148" r="29" class="c-external" />
+    <line x1="645" y1="148" x2="691" y2="148" stroke="#64748b" stroke-width="1" />
+    <text x="668" y="140.5" font-size="7.5" font-weight="700" fill="#1e293b" text-anchor="middle">CLIENTES B2B</text>
+    <text x="668" y="158.5" font-size="6.8" font-weight="600" fill="#64748b" text-anchor="middle">CURVADOS</text>
+  </g>
+
+  <!-- Costurera Tercerizada -->
+  <g id="actor-costurera">
+    <circle cx="550" cy="182" r="21" class="c-external" />
+    <line x1="534" y1="182" x2="566" y2="182" stroke="#64748b" stroke-width="0.8" />
+    <text x="550" y="177.5" font-size="5.8" font-weight="700" fill="#1e293b" text-anchor="middle">COSTURERA</text>
+    <text x="550" y="189" font-size="5.2" font-weight="500" fill="#64748b" text-anchor="middle">EXTERNA</text>
+  </g>
+</svg>
