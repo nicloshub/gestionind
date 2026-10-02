@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP4 - Análisis de la Organización de la Empresa: Gran Sasso S.R.L. | Gestión Industrial FADU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Botón flotante para previsualizar/guardar en PDF -->
+  <button class="print-fab" onclick="window.print()" title="Exportar a PDF">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9V2h12v7"></path>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+      <rect x="6" y="14" width="12" height="8"></rect>
+    </svg>
+    Exportar a PDF
+  </button>
+
+  <div class="sheet-container">
+
+    <!-- ====================================================================
+         PÁGINA 1: PORTADA HERO, CONTINUIDAD CON TP2/TP3 & RECORTE
+         ==================================================================== -->
+    <section class="page" id="page-1">
+      <div class="page-content">
+        <!-- Portada / Header Hero con Imagen de Planta -->
+        <div class="cover-hero">
+          <img src="assets/header_presentacion.jpg" alt="Planta Gran Sasso S.R.L." class="hero-bg">
+          <div class="cover-header">
+            <div class="institution">Trabajo Práctico N.º 4 · Análisis de la Organización de la Empresa</div>
+            <h1>Estructura, Capital Humano y Redes de Colaboración</h1>
+            <div class="subtitle">Diagnóstico organizacional y sociotécnico de Gran Sasso S.R.L. a partir del proceso productivo de la Silla Ginger</div>
+          </div>
+        </div>
+
+        <!-- Metadatos de Grupo -->
+        <div class="metadata-grid">
+          <div class="metadata-item">
+            <span class="label">Cátedra y Materia</span>
+            <span class="value">Gestión Industrial · Cátedra Raquel Ariza (Adj. Martín Escobar) · FADU - UBA</span>
+          </div>
+          <div class="metadata-item">
+            <span class="label">Grupo e Integrantes</span>
+            <span class="value">Grupo 5 · Gustavo Saucedo · Nicolás Cloos · Agustín Coria</span>
+          </div>
+        </div>
+
+        <!-- Pregunta Central de Cátedra -->
+        <div class="pregunta-disparadora">
+          <strong>Pregunta Central de Investigación Organizacional:</strong>
+          <em>«¿La forma en que se organiza Gran Sasso S.R.L. facilita o dificulta el desarrollo de su actividad productiva, la incorporación tecnológica y sus oportunidades de mejora continua?»</em>
+        </div>
+
+        <!-- PARTE 1: Continuidad Metodológica -->
+        <div class="section-title">
+          <span>1. Continuidad Metodológica: del Territorio y el Proceso a la Organización</span>
+          <span class="badge-sec">Articulación Académica</span>
+        </div>
+
+        <div class="ficha-grid" style="margin-bottom: 7px;">
+          <div class="ficha-card">
+            <span class="label">TP2 · Bitácora Socio-Técnica</span>
+            <div class="content"><strong>Dimensión Macro y Contextual:</strong> Relevamiento territorial en General San Martín, ventajas de proximidad clúster, inserción comercial en redes, dotación total (~18 personas) e historia familiar de la firma.</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">TP3 · Diagnóstico Operativo</span>
+            <div class="content"><strong>Dimensión Micro y de Planta:</strong> Mapeo exhaustivo del proceso de la Silla Ginger (16 pasos en cursograma analítico), layout físico, cuello de botella en perforado manual y propuesta de mejora ECRS.</div>
+          </div>
+          <div class="ficha-card full-width">
+            <span class="label">TP4 · Análisis Organizacional (Foco Actual)</span>
+            <div class="content"><strong>Dimensión Mesosociotécnica y Estructural:</strong> El análisis trasciende la máquina y el puesto para examinar cómo se distribuyen las responsabilidades, cómo circula la información operativa, qué saberes sostienen la calidad y qué grado de centralización directiva condiciona la eficiencia productiva de la PyME.</div>
+          </div>
+        </div>
+
+        <!-- PARTE 2: Caracterización y Delimitación del Objeto -->
+        <div class="section-title">
+          <span>2. Foco de Análisis: Flujo Productivo y de Gestión de la Silla Ginger</span>
+          <span class="badge-sec">Producto Testigo</span>
+        </div>
+
+        <div class="producto-analizado-card">
+          <div class="producto-img-container">
+            <img src="assets/ginger.webp" alt="Silla Ginger - Gran Sasso SRL">
+          </div>
+          <div class="producto-detalles">
+            <div class="prod-title">
+              <span>Silla Ginger · Mobiliario Seriando de Alta Complejidad</span>
+              <a href="https://gransassosrl.com/productos/ginger/" target="_blank" class="prod-link">gransassosrl.com/productos/ginger/ ↗</a>
+            </div>
+            <p style="margin-bottom: 4px;">
+              <strong>Articulación interdisciplinaria e intersectorial:</strong> La Silla Ginger es el producto testigo por excelencia de la firma, pues involucra a la totalidad de las áreas de la empresa: diseño y programación CAD/CAM, abastecimiento de láminas y herrajes, curvado dieléctrico en alta frecuencia, celda robótica de 6 ejes, carpintería, lijado manual, confección de tapicería y cabina de lustre.
+            </p>
+            <p>
+              <strong>Alcance y dotación de análisis:</strong> Gran Sasso S.R.L. cuenta con una dotación total de aproximadamente <strong>18 trabajadores</strong>: 12 operarios directos en la planta manufacturera y entre 5 y 6 colaboradores en administración, finanzas, ventas por canales digitales y oficina técnica de diseño y prototipado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dimensionamiento del Caso de Estudio -->
+        <div class="grid-3col">
+          <div class="info-card">
+            <h4>Planta Productiva</h4>
+            <p>Ubicada en Bouchard 3870, San Andrés (General San Martín). Cuenta con dos naves conectadas, sector de prensas de alta frecuencia, celda robótica de 6 ejes y cabina presurizada de pintura.</p>
+          </div>
+          <div class="info-card">
+            <h4>Canal Comercial</h4>
+            <p>Modelo mixto: venta directa al consumidor final (B2C) traccionada mediante campañas de pauta digital en Meta / Instagram, combinada con venta B2B de partes curvadas a fábricas colegas del rubro.</p>
+          </div>
+          <div class="info-card">
+            <h4>Parque de Maquinaria</h4>
+            <p>Convivencia de tecnologías: prensas de curvado por alta frecuencia, brazo robótico de 6 ejes con 4 motores, pantógrafo CNC de 5 ejes junto a sierras escuadradoras tradicionales y lijado artesanal.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 1 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 2: ESTRUCTURA ORGANIZATIVA - ORGANIGRAMA FORMAL VS REAL
+         ==================================================================== -->
+    <section class="page" id="page-2">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Estructura Formal vs. Organización Real</span>
+        </div>
+
+        <div class="section-title">
+          <span>3. Estructura Organizativa: Organigrama Jerárquico y Funcional</span>
+          <span class="badge-sec">Herramienta 1</span>
+        </div>
+
+        <!-- Diagrama Vectorial SVG Organigrama -->
+        <div class="organigrama-container">
+          <svg viewBox="0 0 760 215" xmlns="http://www.w3.org/2000/svg">
+            <!-- Nivel 1: Dirección General -->
+            <rect x="270" y="8" width="220" height="34" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+            <text x="380" y="23" font-family="Inter" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">DIRECCIÓN GENERAL Y SOCIOS</text>
+            <text x="380" y="35" font-family="Inter" font-size="7.5" font-weight="500" fill="#94a3b8" text-anchor="middle">Mauro (Socio Propietario / Director de Planta) + Socio</text>
+
+            <!-- Líneas de bajada de Dirección -->
+            <line x1="380" y1="42" x2="380" y2="60" stroke="#1e293b" stroke-width="1.5"/>
+            <line x1="120" y1="60" x2="640" y2="60" stroke="#1e293b" stroke-width="1.5"/>
+
+            <line x1="120" y1="60" x2="120" y2="75" stroke="#1e293b" stroke-width="1.5"/>
+            <line x1="380" y1="60" x2="380" y2="75" stroke="#1e293b" stroke-width="1.5"/>
+            <line x1="640" y1="60" x2="640" y2="75" stroke="#1e293b" stroke-width="1.5"/>
+
+            <!-- Nivel 2: Áreas Funcionales -->
+            <!-- 1. Administración y Ventas -->
+            <rect x="25" y="75" width="190" height="40" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <text x="120" y="90" font-family="Inter" font-size="8.8" font-weight="700" fill="#1e293b" text-anchor="middle">ADMINISTRACIÓN Y VENTAS</text>
+            <text x="120" y="101" font-family="Inter" font-size="7.2" font-weight="500" fill="#64748b" text-anchor="middle">Ventas Meta/Web, Facturación, Finanzas</text>
+            <text x="120" y="110" font-family="Inter" font-size="6.8" font-weight="600" fill="#92400e" text-anchor="middle">3 a 4 personas · Contacto comercial B2C/B2B</text>
+
+            <!-- 2. Coordinación y Gestión de Planta (Mauro) -->
+            <rect x="260" y="75" width="240" height="40" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+            <text x="380" y="90" font-family="Inter" font-size="8.8" font-weight="800" fill="#92400e" text-anchor="middle">COORDINACIÓN OPERATIVA DE PLANTA</text>
+            <text x="380" y="101" font-family="Inter" font-size="7.2" font-weight="600" fill="#1e293b" text-anchor="middle">Asumida de hecho por Mauro (Sobrecarga de rol)</text>
+            <text x="380" y="110" font-family="Inter" font-size="6.8" font-weight="500" fill="#78350f" text-anchor="middle">Programación, planillas diarias, control de calidad</text>
+
+            <!-- 3. Oficina Técnica y Diseño -->
+            <rect x="545" y="75" width="190" height="40" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+            <text x="640" y="90" font-family="Inter" font-size="8.8" font-weight="700" fill="#1e293b" text-anchor="middle">OFICINA TÉCNICA Y DISEÑO</text>
+            <text x="640" y="101" font-family="Inter" font-size="7.2" font-weight="500" fill="#64748b" text-anchor="middle">Diseño CAD, Programación CAM Robótica</text>
+            <text x="640" y="110" font-family="Inter" font-size="6.8" font-weight="600" fill="#0369a1" text-anchor="middle">1 a 2 proyectistas · Desarrollo de matrices 3D</text>
+
+            <!-- Líneas de bajada de Coordinación de Planta hacia Células de Producción -->
+            <line x1="380" y1="115" x2="380" y2="135" stroke="#92400e" stroke-width="1.5"/>
+            <line x1="45" y1="135" x2="715" y2="135" stroke="#92400e" stroke-width="1.5"/>
+
+            <!-- Conectores verticales a células -->
+            <line x1="45" y1="135" x2="45" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="140" y1="135" x2="140" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="235" y1="135" x2="235" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="330" y1="135" x2="330" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="425" y1="135" x2="425" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="520" y1="135" x2="520" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="615" y1="135" x2="615" y2="148" stroke="#92400e" stroke-width="1.2"/>
+            <line x1="710" y1="135" x2="710" y2="148" stroke="#92400e" stroke-width="1.2"/>
+
+            <!-- Células Operativas en Planta (12 operarios en total) -->
+            <!-- 1. Encolado y Preparación -->
+            <rect x="5" y="148" width="80" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="45" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">Encolado y</text>
+            <text x="45" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">Almacén Chapa</text>
+            <text x="45" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#64748b" text-anchor="middle">Láminas Guatambú</text>
+            <text x="45" y="193" font-family="Inter" font-size="6.2" font-weight="600" fill="#166534" text-anchor="middle">Rotación asistida</text>
+
+            <!-- 2. Prensado Alta Frecuencia -->
+            <rect x="100" y="148" width="80" height="52" rx="3" fill="#f0fdf4" stroke="#86efac"/>
+            <text x="140" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">Prensado Alta</text>
+            <text x="140" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">Frecuencia (HF)</text>
+            <text x="140" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#166534" text-anchor="middle">Capacidad distintiva</text>
+            <text x="140" y="193" font-family="Inter" font-size="6.2" font-weight="700" fill="#15803d" text-anchor="middle">Oficio maderero</text>
+
+            <!-- 3. Celda Robot 6 Ejes -->
+            <rect x="195" y="148" width="80" height="52" rx="3" fill="#f0f9ff" stroke="#7dd3fc"/>
+            <text x="235" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#0369a1" text-anchor="middle">Mecanizado</text>
+            <text x="235" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#0369a1" text-anchor="middle">Robot 6 Ejes</text>
+            <text x="235" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#0284c7" text-anchor="middle">Fresa 3D + Perforado</text>
+            <text x="235" y="193" font-family="Inter" font-size="6.2" font-weight="600" fill="#0369a1" text-anchor="middle">Operador y Setup</text>
+
+            <!-- 4. Carpintería Mecánica -->
+            <rect x="290" y="148" width="80" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="330" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">Carpintería y</text>
+            <text x="330" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">Corte Escuadra</text>
+            <text x="330" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#64748b" text-anchor="middle">Sierra, tupí, espigas</text>
+            <text x="330" y="193" font-family="Inter" font-size="6.2" font-weight="600" fill="#166534" text-anchor="middle">Personal de oficio</text>
+
+            <!-- 5. Lijado y Ensamble -->
+            <rect x="385" y="148" width="80" height="52" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="425" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">Lijado y Ensamble</text>
+            <text x="425" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#1e293b" text-anchor="middle">(Operario Diego)</text>
+            <text x="425" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#64748b" text-anchor="middle">Masillado y cajas</text>
+            <text x="425" y="193" font-family="Inter" font-size="6.2" font-weight="600" fill="#d97706" text-anchor="middle">Rotación continua</text>
+
+            <!-- 6. Tapicería y Confección -->
+            <rect x="480" y="148" width="80" height="52" rx="3" fill="#fff7ed" stroke="#fdba74"/>
+            <text x="520" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#9a3412" text-anchor="middle">Tapicería y</text>
+            <text x="520" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#9a3412" text-anchor="middle">Corte Láser</text>
+            <text x="520" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#c2410c" text-anchor="middle">Corte manual cuero</text>
+            <text x="520" y="193" font-family="Inter" font-size="6.2" font-weight="700" fill="#b91c1c" text-anchor="middle">Puesto fijo crítico</text>
+
+            <!-- 7. Cabina de Lustre / Laca -->
+            <rect x="575" y="148" width="80" height="52" rx="3" fill="#fef2f2" stroke="#fca5a5"/>
+            <text x="615" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#991b1b" text-anchor="middle">Cabina de Lustre</text>
+            <text x="615" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#991b1b" text-anchor="middle">y Laqueado</text>
+            <text x="615" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#dc2626" text-anchor="middle">Poliuretano soplete</text>
+            <text x="615" y="193" font-family="Inter" font-size="6.2" font-weight="700" fill="#b91c1c" text-anchor="middle">Puesto fijo crítico</text>
+
+            <!-- 8. Línea Mesas / Especial -->
+            <rect x="670" y="148" width="80" height="52" rx="3" fill="#fef2f2" stroke="#fca5a5"/>
+            <text x="710" y="161" font-family="Inter" font-size="7" font-weight="700" fill="#991b1b" text-anchor="middle">Línea de Mesas</text>
+            <text x="710" y="170" font-family="Inter" font-size="7" font-weight="700" fill="#991b1b" text-anchor="middle">(Monopersonal)</text>
+            <text x="710" y="182" font-family="Inter" font-size="6.2" font-weight="500" fill="#dc2626" text-anchor="middle">1 solo operario integral</text>
+            <text x="710" y="193" font-family="Inter" font-size="6.2" font-weight="700" fill="#b91c1c" text-anchor="middle">Riesgo operativo alto</text>
+          </svg>
+        </div>
+
+        <!-- Análisis Comparativo: Formal vs Real -->
+        <div class="section-title">
+          <span>Comparativa Estructural: Estructura Formal vs. Organización Real Observada</span>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">Dimensión</th>
+              <th style="width: 38%;">Estructura Formal Proyectada</th>
+              <th style="width: 44%;">Organización Real en Planta (Evidencia de Campo)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Toma de Decisiones</strong></td>
+              <td>Dirección estratégica compartida entre socios con áreas operativas delegadas.</td>
+              <td><strong>Hipercentralización en Mauro:</strong> Resuelve simultáneamente decisiones macro (compra de maquinaria CNC importada) y micro (reasignación de operarios por imprevistos, corrección de ensambles y control de calidad en banco).</td>
+            </tr>
+            <tr>
+              <td><strong>Planificación y Control</strong></td>
+              <td>Programación de la producción sistemática basada en pedidos y tiempos estándar.</td>
+              <td><strong>Gestión reactiva día a día:</strong> Entrega matutina de planillas impresas en papel que se reimprimen o corrigen verbalmente según urgencias comerciales o cuellos de botella contingentes (Audio 04).</td>
+            </tr>
+            <tr>
+              <td><strong>Límites de Roles</strong></td>
+              <td>Puestos delimitados con responsabilidades claras por estación de trabajo.</td>
+              <td><strong>Polivalencia de hecho no formalizada:</strong> El 70% del personal rota entre lijado, escuadradora, embalaje y armado según demanda ("voy donde me necesitan" - Diego), sin matriz formal de competencias.</td>
+            </tr>
+            <tr>
+              <td><strong>Mantenimiento y Calidad</strong></td>
+              <td>Áreas de soporte técnico preventivo y control de calidad estandarizado.</td>
+              <td><strong>Inexistencia de áreas formales:</strong> El mantenimiento del centro de mecanizado 5 ejes y robots lo gestiona Mauro sobre la marcha; la calidad descansa en el ojo del operario experimentado y la inspección final directiva.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Tarjetas de Diagnóstico de Brechas -->
+        <div class="grid-3col">
+          <div class="info-card">
+            <h4>1. Cuello de Botella Directivo</h4>
+            <p>La concentración de funciones técnicas, operativas y de personal en Mauro genera demoras en la resolución de interferencias de diseño y posterga proyectos estratégicos como el rediseño del layout de planta.</p>
+          </div>
+          <div class="info-card">
+            <h4>2. Vulnerabilidad de Puestos Fijos</h4>
+            <p>Frente a la rotación general, laqueado, tapicería y armado de mesas dependen de trabajadores únicos. Una ausencia paraliza la entrega de productos terminados, evidenciando falta de redundancia en saberes críticos.</p>
+          </div>
+          <div class="info-card">
+            <h4>3. Ausencia de Mandos Medios</h4>
+            <p>No existe la figura formal de un supervisor de planta o planificador de operaciones. El salto directo de los operarios de banco al titular limita la capacidad de mejora continua y estandarización de procesos.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 2 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 3: MAPA DE RELACIONES Y COLABORACIÓN
+         ==================================================================== -->
+    <section class="page" id="page-3">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Redes y Mapa de Colaboración</span>
+        </div>
+
+        <div class="section-title">
+          <span>4. Mapa de Relaciones y Colaboración: Ecosistema Interno y Red Territorial</span>
+          <span class="badge-sec">Herramienta 2</span>
+        </div>
+
+        <!-- Diagrama Vectorial SVG Red de Relaciones -->
+        <div class="red-container">
+          <svg viewBox="0 0 760 175" xmlns="http://www.w3.org/2000/svg">
+            <!-- Nodos Externos Izquierda: Proveedores Clúster San Martín -->
+            <rect x="10" y="15" width="160" height="34" rx="3" fill="#f3e8ff" stroke="#c084fc"/>
+            <text x="90" y="28" font-family="Inter" font-size="7.6" font-weight="700" fill="#6b21a8" text-anchor="middle">Herrería Satélite Externa</text>
+            <text x="90" y="40" font-family="Inter" font-size="6.8" font-weight="500" fill="#7e22ce" text-anchor="middle">Taller del hermano · Bases metálicas</text>
+
+            <rect x="10" y="65" width="160" height="34" rx="3" fill="#f3e8ff" stroke="#c084fc"/>
+            <text x="90" y="78" font-family="Inter" font-size="7.6" font-weight="700" fill="#6b21a8" text-anchor="middle">Proveedor Metales y Caños</text>
+            <text x="90" y="90" font-family="Inter" font-size="6.8" font-weight="500" fill="#7e22ce" text-anchor="middle">A 50 m de planta · Sin flete logístico</text>
+
+            <rect x="10" y="115" width="160" height="34" rx="3" fill="#f3e8ff" stroke="#c084fc"/>
+            <text x="90" y="128" font-family="Inter" font-size="7.6" font-weight="700" fill="#6b21a8" text-anchor="middle">Pintura Epoxi y Costura</text>
+            <text x="90" y="140" font-family="Inter" font-size="6.8" font-weight="500" fill="#7e22ce" text-anchor="middle">Taller a 150 m + Costurera vecina</text>
+
+            <!-- NODO CENTRAL: GRAN SASSO SRL -->
+            <rect x="260" y="25" width="240" height="120" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <text x="380" y="46" font-family="Inter" font-size="10.5" font-weight="800" fill="#ffffff" text-anchor="middle">GRAN SASSO S.R.L.</text>
+            <text x="380" y="59" font-family="Inter" font-size="7.8" font-weight="600" fill="#f59e0b" text-anchor="middle">Núcleo Productivo Central (San Andrés)</text>
+            
+            <line x1="280" y1="67" x2="480" y2="67" stroke="#475569" stroke-width="1"/>
+
+            <!-- Subnodos internos dentro del núcleo -->
+            <rect x="275" y="75" width="100" height="28" rx="2" fill="#334155"/>
+            <text x="325" y="87" font-family="Inter" font-size="7" font-weight="700" fill="#e2e8f0" text-anchor="middle">Dirección / Mauro</text>
+            <text x="325" y="97" font-family="Inter" font-size="6" font-weight="500" fill="#94a3b8" text-anchor="middle">Eje articulador clave</text>
+
+            <rect x="385" y="75" width="105" height="28" rx="2" fill="#334155"/>
+            <text x="437" y="87" font-family="Inter" font-size="7" font-weight="700" fill="#e2e8f0" text-anchor="middle">Ventas y Diseño</text>
+            <text x="437" y="97" font-family="Inter" font-size="6" font-weight="500" fill="#94a3b8" text-anchor="middle">Demanda y CAD/CAM</text>
+
+            <rect x="275" y="108" width="215" height="26" rx="2" fill="#475569"/>
+            <text x="382" y="120" font-family="Inter" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">Células de Planta (12 Operarios)</text>
+            <text x="382" y="129" font-family="Inter" font-size="6.2" font-weight="500" fill="#cbd5e1" text-anchor="middle">Curvado HF · Robótica · Lijado Diego · Tapizado · Acabado</text>
+
+            <!-- Nodos Externos Derecha: Cadena de Suministro y Mercado -->
+            <rect x="580" y="15" width="170" height="34" rx="3" fill="#fef3c7" stroke="#fcd34d"/>
+            <text x="665" y="28" font-family="Inter" font-size="7.6" font-weight="700" fill="#92400e" text-anchor="middle">Proveedores de Madera</text>
+            <text x="665" y="40" font-family="Inter" font-size="6.8" font-weight="500" fill="#b45309" text-anchor="middle">Láminas de Misiones (1,30x2,60 m) + Chapa 0.7</text>
+
+            <rect x="580" y="65" width="170" height="34" rx="3" fill="#e0f2fe" stroke="#7dd3fc"/>
+            <text x="665" y="78" font-family="Inter" font-size="7.6" font-weight="700" fill="#0369a1" text-anchor="middle">Clientes B2C (Particulares)</text>
+            <text x="665" y="90" font-family="Inter" font-size="6.8" font-weight="500" fill="#0284c7" text-anchor="middle">Tracción digital Meta / Redes sociales</text>
+
+            <rect x="580" y="115" width="170" height="34" rx="3" fill="#dcfce7" stroke="#86efac"/>
+            <text x="665" y="128" font-family="Inter" font-size="7.6" font-weight="700" fill="#166534" text-anchor="middle">Clientes B2B (Fábricas Mobiliario)</text>
+            <text x="665" y="140" font-family="Inter" font-size="6.8" font-weight="500" fill="#15803d" text-anchor="middle">Venta de curvados HF a terceros</text>
+
+            <!-- LÍNEAS DE CONEXIÓN CON ETIQUETAS DE CANAL -->
+            <!-- Herrería -> Gran Sasso -->
+            <line x1="170" y1="32" x2="260" y2="50" stroke="#7e22ce" stroke-width="1.8"/>
+            <!-- Metales 50m -> Gran Sasso -->
+            <line x1="170" y1="82" x2="260" y2="85" stroke="#7e22ce" stroke-width="1.8"/>
+            <!-- Pintura/Costura -> Gran Sasso -->
+            <line x1="170" y1="132" x2="260" y2="120" stroke="#7e22ce" stroke-width="1.8"/>
+
+            <!-- Gran Sasso -> Proveedor Madera -->
+            <line x1="500" y1="50" x2="580" y2="32" stroke="#b45309" stroke-width="1.8"/>
+            <!-- Gran Sasso -> Clientes B2C -->
+            <line x1="500" y1="85" x2="580" y2="82" stroke="#0284c7" stroke-width="1.8"/>
+            <!-- Gran Sasso -> Clientes B2B -->
+            <line x1="500" y1="120" x2="580" y2="132" stroke="#15803d" stroke-width="1.8"/>
+          </svg>
+        </div>
+
+        <!-- Matriz de Relaciones y Colaboración -->
+        <div class="section-title">
+          <span>Matriz de Relaciones y Vínculos de Colaboración (Internos y Externos)</span>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Actor / Área</th>
+              <th style="width: 9%;">Ámbito</th>
+              <th style="width: 11%;">Tipo Vínculo</th>
+              <th style="width: 14%;">Canal Principal</th>
+              <th style="width: 12%;">Frecuencia</th>
+              <th style="width: 11%;">Calidad</th>
+              <th style="width: 21%;">Observaciones Operativas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dirección ↔ Taller (Diego/Operarios)</strong></td>
+              <td><span class="badge badge-interno">Interno</span></td>
+              <td>Fuerte / Directo</td>
+              <td>Oral + Planillas papel</td>
+              <td>Diaria / Continua</td>
+              <td><span class="badge badge-fuerte">Fuerte</span></td>
+              <td>Comunicación cara a cara muy ágil, pero genera pérdida de registro de cambios.</td>
+            </tr>
+            <tr>
+              <td><strong>Oficina Técnica ↔ Robot 6 Ejes</strong></td>
+              <td><span class="badge badge-interno">Interno</span></td>
+              <td>Estratégico</td>
+              <td>Red digital / USB</td>
+              <td>Semanal / Pedido</td>
+              <td><span class="badge badge-fuerte">Fuerte</span></td>
+              <td>Transferencia fluida de código G; falta validación física sistemática en banco.</td>
+            </tr>
+            <tr>
+              <td><strong>Herrería Satélite (Taller Hermano)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Familiar / Crítico</td>
+              <td>WhatsApp / Presencial</td>
+              <td>Diaria / A pedido</td>
+              <td><span class="badge badge-fuerte">Fuerte</span></td>
+              <td>Confianza total y respuesta rápida; dependencia de un único proveedor de metal.</td>
+            </tr>
+            <tr>
+              <td><strong>Proveedor Clúster Metales (50 m)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Comercial directo</td>
+              <td>Mostrador / Teléfono</td>
+              <td>Semanal</td>
+              <td><span class="badge badge-fuerte">Óptima</span></td>
+              <td>Cero costo logístico por cercanía geográfica en San Martín; aprovisionamiento JIT.</td>
+            </tr>
+            <tr>
+              <td><strong>Costura Tercerizada (Vecina)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Cooperativo local</td>
+              <td>Retiro / Entrega mano</td>
+              <td>Semanal</td>
+              <td><span class="badge badge-medio">Buena</span></td>
+              <td>Se entregan cortes textiles listos y se reciben fundas; sensible a tiempos de entrega.</td>
+            </tr>
+            <tr>
+              <td><strong>Madereras Misiones (Láminas)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Abastecimiento clave</td>
+              <td>Mail / Telefónico</td>
+              <td>Mensual / Lotes</td>
+              <td><span class="badge badge-medio">Media</span></td>
+              <td>Alta dependencia de fletes interprovinciales; variabilidad en humedad de láminas.</td>
+            </tr>
+            <tr>
+              <td><strong>Clientes Finales (Particulares)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Comercial B2C</td>
+              <td>Meta / Instagram / Web</td>
+              <td>Diaria</td>
+              <td><span class="badge badge-fuerte">Fluida</span></td>
+              <td>Tracción directa de demanda que exige alta flexibilidad de variantes en fábrica.</td>
+            </tr>
+            <tr>
+              <td><strong>Fábricas Terceras (Curvados B2B)</strong></td>
+              <td><span class="badge badge-externo">Externo</span></td>
+              <td>Alianza productiva</td>
+              <td>Comercial B2B</td>
+              <td>Quincenal</td>
+              <td><span class="badge badge-medio">Buena</span></td>
+              <td>Aprovecha la capacidad ociosa de la prensa de alta frecuencia posicionando a la firma.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Síntesis del Ecosistema -->
+        <div class="grid-2col">
+          <div class="info-card">
+            <h4>Densidad Territorial en General San Martín</h4>
+            <p>La inserción en el clúster PyME permite a Gran Sasso operar con costos de transacción y fletes mínimos: proveedor de metales a 50 m y pintura epoxi a 150 m. La red de confianza familiar y vecinal resuelve imprevistos con rapidez inalcanzable para empresas aisladas.</p>
+          </div>
+          <div class="info-card">
+            <h4>Tensión de Vulnerabilidad Relacional</h4>
+            <p>La alta dependencia de proveedores hiperlocales monopólicos (herrería del hermano y costurera barrial) representa un riesgo de continuidad operativa si acontecen contingencias personales o mecánicas fuera del control formal de la empresa.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 3 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 4: FLUJO DE INFORMACIÓN CLAVE Y CANALES DE COMUNICACIÓN
+         ==================================================================== -->
+    <section class="page" id="page-4">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Flujo de Información y Canales</span>
+        </div>
+
+        <div class="section-title">
+          <span>5. Diagnóstico del Circuito Informacional Crítico: del Pedido al Despacho</span>
+          <span class="badge-sec">Herramienta 3</span>
+        </div>
+
+        <!-- Diagrama Vectorial SVG Flujo de Información -->
+        <div class="flujo-container">
+          <svg viewBox="0 0 760 145" xmlns="http://www.w3.org/2000/svg">
+            <!-- Paso 1 -->
+            <rect x="5" y="15" width="80" height="55" rx="3" fill="#e0f2fe" stroke="#38bdf8"/>
+            <text x="45" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#0369a1" text-anchor="middle">1. Pedido Cliente</text>
+            <text x="45" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#0284c7" text-anchor="middle">Vía Meta / Web</text>
+            <text x="45" y="52" font-family="Inter" font-size="6" font-weight="600" fill="#0369a1" text-anchor="middle">Personalización</text>
+            <text x="45" y="62" font-family="Inter" font-size="5.8" font-weight="500" fill="#64748b" text-anchor="middle">(Telas / Lustre)</text>
+
+            <line x1="85" y1="42" x2="100" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 2 -->
+            <rect x="100" y="15" width="85" height="55" rx="3" fill="#f8fafc" stroke="#cbd5e1"/>
+            <text x="142" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#1e293b" text-anchor="middle">2. Administración</text>
+            <text x="142" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#475569" text-anchor="middle">Carga de pedido</text>
+            <text x="142" y="52" font-family="Inter" font-size="6" font-weight="600" fill="#1e293b" text-anchor="middle">Facturación / Seña</text>
+            <text x="142" y="62" font-family="Inter" font-size="5.8" font-weight="500" fill="#64748b" text-anchor="middle">Soporte PC</text>
+
+            <line x1="185" y1="42" x2="200" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 3 -->
+            <rect x="200" y="15" width="95" height="55" rx="3" fill="#fef3c7" stroke="#f59e0b"/>
+            <text x="247" y="28" font-family="Inter" font-size="6.8" font-weight="800" fill="#92400e" text-anchor="middle">3. Prog. de Mauro</text>
+            <text x="247" y="40" font-family="Inter" font-size="6" font-weight="600" fill="#78350f" text-anchor="middle">Emisión de Planillas</text>
+            <text x="247" y="52" font-family="Inter" font-size="6" font-weight="500" fill="#92400e" text-anchor="middle">Hojas impresas</text>
+            <text x="247" y="62" font-family="Inter" font-size="5.8" font-weight="700" fill="#b91c1c" text-anchor="middle">Salto Digital → Papel</text>
+
+            <line x1="295" y1="42" x2="310" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 4 -->
+            <rect x="310" y="15" width="90" height="55" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="355" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#1e293b" text-anchor="middle">4. Banco de Taller</text>
+            <text x="355" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#475569" text-anchor="middle">Recepción de hoja</text>
+            <text x="355" y="52" font-family="Inter" font-size="6" font-weight="500" fill="#64748b" text-anchor="middle">Prensas y Corte</text>
+            <text x="355" y="62" font-family="Inter" font-size="5.8" font-weight="600" fill="#d97706" text-anchor="middle">Expuesto a polvo</text>
+
+            <line x1="400" y1="42" x2="415" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 5 -->
+            <rect x="415" y="15" width="95" height="55" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="462" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#1e293b" text-anchor="middle">5. Mecanizado y Lija</text>
+            <text x="462" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#475569" text-anchor="middle">Robot + Diego</text>
+            <text x="462" y="52" font-family="Inter" font-size="6" font-weight="600" fill="#1e293b" text-anchor="middle">Tildado manual</text>
+            <text x="462" y="62" font-family="Inter" font-size="5.8" font-weight="500" fill="#64748b" text-anchor="middle">Retrabajo si falla</text>
+
+            <line x1="510" y1="42" x2="525" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 6 -->
+            <rect x="525" y="15" width="105" height="55" rx="3" fill="#fff7ed" stroke="#fdba74"/>
+            <text x="577" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#c2410c" text-anchor="middle">6. Lustre y Tapizado</text>
+            <text x="577" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#9a3412" text-anchor="middle">Puestos fijos críticos</text>
+            <text x="577" y="52" font-family="Inter" font-size="6" font-weight="600" fill="#c2410c" text-anchor="middle">Dependencia visual</text>
+            <text x="577" y="62" font-family="Inter" font-size="5.8" font-weight="500" fill="#78350f" text-anchor="middle">Ajuste con satélites</text>
+
+            <line x1="630" y1="42" x2="645" y2="42" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- Paso 7 -->
+            <rect x="645" y="15" width="105" height="55" rx="3" fill="#dcfce7" stroke="#86efac"/>
+            <text x="697" y="28" font-family="Inter" font-size="6.8" font-weight="700" fill="#166534" text-anchor="middle">7. Control y Despacho</text>
+            <text x="697" y="40" font-family="Inter" font-size="6" font-weight="500" fill="#15803d" text-anchor="middle">Inspección de Mauro</text>
+            <text x="697" y="52" font-family="Inter" font-size="6" font-weight="600" fill="#166534" text-anchor="middle">Remito de entrega</text>
+            <text x="697" y="62" font-family="Inter" font-size="5.8" font-weight="500" fill="#14532d" text-anchor="middle">Cierre en admin</text>
+
+            <!-- LÍNEA INFERIOR DE RETROALIMENTACIÓN Y RIESGO INFORMACIONAL -->
+            <path d="M 697 70 L 697 105 L 247 105 L 247 70" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="470" y="98" font-family="Inter" font-size="6.8" font-weight="700" fill="#b91c1c" text-anchor="middle">Brecha: Retroalimentación manual / Reimpresión diaria por urgencias o piezas rajadas (Audio 04 y 07)</text>
+            
+            <circle cx="247" cy="105" r="3" fill="#ef4444"/>
+            <circle cx="697" cy="105" r="3" fill="#ef4444"/>
+          </svg>
+        </div>
+
+        <!-- Tabla de Auditoría del Circuito de Información -->
+        <div class="section-title">
+          <span>Auditoría de Flujos de Información Operativa y de Gestión</span>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 17%;">Tipo de Información</th>
+              <th style="width: 14%;">Emisor</th>
+              <th style="width: 15%;">Receptor</th>
+              <th style="width: 13%;">Soporte / Canal</th>
+              <th style="width: 16%;">Uso en la Operación</th>
+              <th style="width: 25%;">Problema / Falla Detectada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pedido y Especificaciones</strong></td>
+              <td>Ventas / Cliente</td>
+              <td>Administración / Mauro</td>
+              <td>WhatsApp / CRM / Mail</td>
+              <td>Consolidar demanda, definir modelos, telas y acabados.</td>
+              <td>Datos a veces dispersos en chats; falta de ficha de producto unificada digital.</td>
+            </tr>
+            <tr>
+              <td><strong>Planillas de Programación</strong></td>
+              <td>Mauro (Dirección)</td>
+              <td>Operarios de Planta</td>
+              <td>Papel impreso (diario/semanal)</td>
+              <td>Secuencia de corte, curvado y armado diario por banco.</td>
+              <td><strong>Desactualización y deterioro:</strong> Se reimprimen a diario; se ensucian con cola/polvo; versiones viejas conviven en taller.</td>
+            </tr>
+            <tr>
+              <td><strong>Programas de Mecanizado</strong></td>
+              <td>Oficina Técnica</td>
+              <td>Celda Robot 6 Ejes</td>
+              <td>Digital (USB / Red LAN)</td>
+              <td>Fresado 3D de cascos curvados de Silla Ginger.</td>
+              <td>Falta de registro de incidencias mecánicas o desgaste de fresas en el soporte digital.</td>
+            </tr>
+            <tr>
+              <td><strong>Avisos de Piezas Rajadas / Fallas</strong></td>
+              <td>Diego / Operarios</td>
+              <td>Carpintería / Mauro</td>
+              <td>Verbal cara a cara</td>
+              <td>Devolución de partes defectuosas para masillar o re-encolar.</td>
+              <td><strong>Información volátil:</strong> No se cuantifica el scrap ni el tiempo muerto por esperas de secado (Audio 07).</td>
+            </tr>
+            <tr>
+              <td><strong>Órdenes a Proveedores Clúster</strong></td>
+              <td>Mauro / Compras</td>
+              <td>Herrería y Pintura local</td>
+              <td>WhatsApp / Verbal directo</td>
+              <td>Pedido de lotes de bases metálicas y acabado epoxi.</td>
+              <td>Ágil pero vulnerable: si el mensaje se omite, se demora el ensamble final.</td>
+            </tr>
+            <tr>
+              <td><strong>Control de Stock de Láminas</strong></td>
+              <td>Operarios almacén</td>
+              <td>Mauro / Compras</td>
+              <td>Revisión ocular periódica</td>
+              <td>Compra de pallets a Misiones (1,30 x 2,60 m).</td>
+              <td>Ausencia de punto de pedido sistematizado; riesgo de quiebre o sobrestock.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Análisis de Calidad Informacional -->
+        <div class="grid-3col">
+          <div class="info-card">
+            <h4>Oportunidad y Confiabilidad</h4>
+            <p>La información viaja con inmediatez verbal, pero carece de persistencia. Al cambiar las prioridades de entrega, la orden transmitida de palabra genera desfasajes entre lo que prensa corta y lo que lijado procesa.</p>
+          </div>
+          <div class="info-card">
+            <h4>Brecha Analógico-Digital</h4>
+            <p>La empresa cuenta con robots de última generación y campañas avanzadas en Meta, pero el nexo operativo intermedio es una planilla de papel estática sujeta a desgaste, extravíos y reimpresiones cotidianas.</p>
+          </div>
+          <div class="info-card">
+            <h4>Falta de Métricas de Scrap</h4>
+            <p>Los problemas reportados por Diego (chapa comida por lija, masillado y tiempos de fraguado) no se computan en planillas de no conformidad, imposibilitando un control estadístico de calidad en origen.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 4 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 5: CAPITAL HUMANO, SABERES Y MATRIZ DE POLIVALENCIA
+         ==================================================================== -->
+    <section class="page" id="page-5">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Capital Humano y Saberes Críticos</span>
+        </div>
+
+        <div class="section-title">
+          <span>6. Gestión del Capital Humano: Perfiles, Saberes y Polivalencia Operativa</span>
+          <span class="badge-sec">Herramienta 4</span>
+        </div>
+
+        <!-- Dimensiones del Capital Humano según Guía Oficial -->
+        <table class="data-table" style="margin-bottom: 6px;">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Dimensión de Cátedra</th>
+              <th style="width: 38%;">Situación Diagnosticada en Gran Sasso S.R.L.</th>
+              <th style="width: 40%;">Evidencias de Campo y Testimonios Relevados</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Capacitación e Inducción</strong></td>
+              <td><strong>Modelo 30 / 70:</strong> Solo el 30% del personal ingresa con oficio formal maderero. El 70% restante adquiere las destrezas directamente en planta mediante aprendizaje por imitación y tutela de operarios experimentados.</td>
+              <td><em>"Yo no es que soy carpintero, fui aprendiendo acá paso a paso"</em> (Diego, 1 año en lijado y ensamble de cajas - Audio 07). Inexistencia de manuales escritos de inducción o SOP formales.</td>
+            </tr>
+            <tr>
+              <td><strong>Polivalencia y Rotación</strong></td>
+              <td>Existe amplia flexibilidad y rotación de operarios en puestos de baja y media criticidad para balancear cargas diarias, pero coexisten <strong>tres puestos fijos de extrema especialización</strong> que operan como islas monopersonales.</td>
+              <td>Rotación activa en lijado, armado de cajas y torno (Audio 01). Puestos sin relevo: <strong>1) Laqueador</strong> (mezcla y soplete), <strong>2) Tapicería de cuero</strong> y <strong>3) Línea completa de mesas</strong> (Audio 05).</td>
+            </tr>
+            <tr>
+              <td><strong>Participación y Sugerencias</strong></td>
+              <td>Cultura receptiva a iniciativas operativas. Los trabajadores tienen canal abierto con la dirección para proponer ajustes técnicos en dispositivos y máquinas que mejoran la cadencia de trabajo.</td>
+              <td>Propuesta e implementación exitosa del ajuste y calibración del rodillo de alimentación en la cortadora láser textil, surgida por sugerencia directa de los operarios de tapicería (Audio 01).</td>
+            </tr>
+            <tr>
+              <td><strong>Seguridad, Ergonomía y Salud</strong></td>
+              <td>Condiciones de seguridad básicas cubiertas (EPP, mascarillas, guardas mecánicas), pero persistencia de <strong>fatiga postural y polvillo en suspensión</strong> en las estaciones de lijado manual intensivo.</td>
+              <td>Instalación de sistema de aspiración general hace 4 meses (Audio 01), pero Diego señala que el polvo sigue disperso en el aire y sugiere extractores axiales forzados en muros altos (Audio 07).</td>
+            </tr>
+            <tr>
+              <td><strong>Capacidades Digitales</strong></td>
+              <td>Fuerte polarización: alta capacitación digital en oficina técnica (Rhino, AlphaCAM, programación robótica de 6 ejes) versus nula digitalización en puestos operativos de banco de taller.</td>
+              <td>Los operarios interactúan con pantallas únicamente como operadores de celdas cerradas ("pulsar botón"); no cargan partes de producción ni registran tiempos en terminales digitales.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Matriz Gráfica de Polivalencia -->
+        <div class="section-title">
+          <span>Matriz de Polivalencia y Distribución de Competencias por Célula</span>
+        </div>
+
+        <!-- Leyenda de Competencias -->
+        <div class="legend-box">
+          <strong>Nivel de Competencia:</strong>
+          <span class="legend-item"><span class="level-dot level-3"></span> Nivel 3: Experto / Capacita a otros</span>
+          <span class="legend-item"><span class="level-dot level-2"></span> Nivel 2: Autónomo / Ejecuta sin supervisión</span>
+          <span class="legend-item"><span class="level-dot level-1"></span> Nivel 1: Asistido / Requiere acompañamiento</span>
+          <span class="legend-item"><span class="level-dot level-0"></span> Nivel 0: Sin instrucción / No calificado</span>
+        </div>
+
+        <table class="polivalencia-table">
+          <thead>
+            <tr>
+              <th style="width: 18%;">Operario / Puesto</th>
+              <th style="width: 14%;">Perfil / Experiencia</th>
+              <th style="width: 11%;">Curvado HF</th>
+              <th style="width: 11%;">Robot 6 Ejes</th>
+              <th style="width: 11%;">Carpintería</th>
+              <th style="width: 11%;">Lijado / Ensamble</th>
+              <th style="width: 12%;">Tapicería Láser</th>
+              <th style="width: 12%;">Laqueado Laca</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Oficial Curvador</strong></td>
+              <td>Oficio previo (>5 años)</td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr>
+              <td><strong>Operador Robótica</strong></td>
+              <td>Técnico CNC (2 años)</td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr>
+              <td><strong>Carpintero Oficial</strong></td>
+              <td>Oficio tradicional (>8 años)</td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr>
+              <td><strong>Diego (Entrevistado)</strong></td>
+              <td>Capacitado en planta (1 año)</td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr>
+              <td><strong>Operario Ayudante</strong></td>
+              <td>Ingresante reciente (4 meses)</td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr style="background: #fef2f2;">
+              <td><strong>Oficial Laqueador</strong></td>
+              <td>Puesto fijo único (>6 años)</td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span> <strong>(ÚNICO)</strong></td>
+            </tr>
+            <tr style="background: #fff7ed;">
+              <td><strong>Tapicero Principal</strong></td>
+              <td>Puesto fijo cuero (>4 años)</td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span> <strong>(ÚNICO)</strong></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+            </tr>
+            <tr style="background: #fef2f2;">
+              <td><strong>Responsable Mesas</strong></td>
+              <td>Puesto monopersonal integral</td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-1"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-3"></span><span class="level-dot level-3"></span><span class="level-dot level-3"></span></td>
+              <td><span class="level-dot level-0"></span><span class="level-dot level-0"></span><span class="level-dot level-0"></span></td>
+              <td><span class="level-dot level-2"></span><span class="level-dot level-2"></span><span class="level-dot level-0"></span> <strong>(RIESGO)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Hallazgo y Recomendación Operativa -->
+        <div class="grid-2col">
+          <div class="info-card">
+            <h4>Diagnóstico de Competencias Críticas</h4>
+            <p>La matriz revela una sólida base de polivalencia en el bloque intermedio (corte, encolado, lijado y embalaje), lo que amortigua ausencias operativas habituales. No obstante, las filas sombreadas exponen una fragilidad estructural severa: si el laqueador o el armador de mesas faltan, esas líneas productivas se detienen íntegramente.</p>
+          </div>
+          <div class="info-card">
+            <h4>Estrategia de Mitigación Socio-Técnica</h4>
+            <p>Se propone implementar un plan formal de <em>capacitación cruzada estructurada</em> (rotación tutelada de 2 horas semanales de operarios como Diego hacia cabina de laca y tapicería) respaldado por fichas visuales de proceso (SOP), reduciendo la dependencia del saber tácito exclusivo.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 5 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 6: MATRICES DE DIAGNÓSTICO INTEGRAL Y CRUCE TP1/TP2/TP3
+         ==================================================================== -->
+    <section class="page" id="page-6">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Matrices de Diagnóstico y Articulación Cruzada</span>
+        </div>
+
+        <div class="section-title">
+          <span>7. Matriz de Diagnóstico Organizacional (Ficha Oficial de Cátedra)</span>
+          <span class="badge-sec">Herramienta 5</span>
+        </div>
+
+        <table class="data-table" style="margin-bottom: 9px;">
+          <thead>
+            <tr>
+              <th style="width: 14%;">Tema</th>
+              <th style="width: 20%;">Hallazgo Principal</th>
+              <th style="width: 18%;">Evidencia de Campo</th>
+              <th style="width: 15%;">Fortaleza</th>
+              <th style="width: 16%;">Tensión / Falla</th>
+              <th style="width: 17%;">Oportunidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Organigrama</strong></td>
+              <td>Dirección altamente concentrada en el socio fundador/Mauro.</td>
+              <td>Mauro decide compras CNC, planillas de taller y calidad.</td>
+              <td>Agilidad de mando y visión integral del negocio.</td>
+              <td>Sobrecarga de rol y falta de mandos medios.</td>
+              <td>Designar encargado de planta y planificador formal.</td>
+            </tr>
+            <tr>
+              <td><strong>Relaciones Internas</strong></td>
+              <td>Coordinación informal verbal y directa de taller a oficina.</td>
+              <td>Conversación cotidiana en banco y reclamos de paso.</td>
+              <td>Clima distendido y resolución inmediata.</td>
+              <td>Pérdida de trazabilidad de cambios y reclamos.</td>
+              <td>Tablero Kanban visual de piso de planta.</td>
+            </tr>
+            <tr>
+              <td><strong>Relaciones Externas</strong></td>
+              <td>Articulación densa en el clúster de San Martín.</td>
+              <td>Metales a 50 m, pintura a 150 m y herrería familiar.</td>
+              <td>Cero costo logístico y rápida respuesta.</td>
+              <td>Riesgo por proveedores monopólicos familiares.</td>
+              <td>Homologar segundas fuentes de herrería.</td>
+            </tr>
+            <tr>
+              <td><strong>Flujo Información</strong></td>
+              <td>Planillas físicas impresas diarias para los bancos.</td>
+              <td>Reimpresión diaria por desfasajes (Audio 04).</td>
+              <td>Independencia de terminales de cómputo en taller.</td>
+              <td>Planillas deterioradas, desactualización y desajustes.</td>
+              <td>Ficha única de lote con código QR/SOP.</td>
+            </tr>
+            <tr>
+              <td><strong>Capital Humano</strong></td>
+              <td>70% formado empíricamente en la empresa; 30% oficio.</td>
+              <td>Testimonio de Diego: "fui aprendiendo acá" (Audio 07).</td>
+              <td>Gran sentido de pertenencia y compromiso.</td>
+              <td>Ausencia de manuales de inducción y riesgo en lija.</td>
+              <td>Instructivos visuales de trabajo paso a paso.</td>
+            </tr>
+            <tr>
+              <td><strong>Polivalencia</strong></td>
+              <td>Alta rotación operativa versus 3 islas monopersonales.</td>
+              <td>Puestos únicos en laqueado, tapicería cuero y mesas.</td>
+              <td>Flexibilidad de balance en lijado y cajas.</td>
+              <td>Paralización de entregas ante ausencias clave.</td>
+              <td>Capacitación cruzada tutelada 2 h/semana.</td>
+            </tr>
+            <tr>
+              <td><strong>Cultura Mejora</strong></td>
+              <td>Apertura directiva a propuestas directas de operarios.</td>
+              <td>Calibración del rodillo láser por personal (Audio 01).</td>
+              <td>Motivación intrínseca y confianza mutua.</td>
+              <td>Iniciativas aisladas no sistematizadas en método.</td>
+              <td>Círculo mensual de sugerencias y mejoras.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Matriz de Vínculo con TP1, TP2 y TP3 -->
+        <div class="section-title">
+          <span>8. Matriz de Articulación Cruzada con Trabajos Anteriores (TP1, TP2 y TP3)</span>
+          <span class="badge-sec">Continuidad</span>
+        </div>
+
+        <table class="data-table" style="margin-bottom: 9px;">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Hallazgo Relevado en TP2 / TP3</th>
+              <th style="width: 20%;">Área o Actor Involucrado</th>
+              <th style="width: 25%;">Problema Organizacional Asociado</th>
+              <th style="width: 30%;">Acción Organizativa Propuesta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cuello de botella en agujereado manual (5,5 min)</strong></td>
+              <td>Mecanizado / Celda Robótica / Mauro</td>
+              <td>Falta de dispositivo matricial estandarizado por demora directiva en liberar tiempo de programación CAD/CAM.</td>
+              <td>Delegar la supervisión diaria para que la Oficina Técnica diseñe y mecanice el dispositivo de perforado con bujes.</td>
+            </tr>
+            <tr>
+              <td><strong>Recorrido no lineal y cruces de layout (65 m)</strong></td>
+              <td>Jefatura de Taller / Movimiento de materiales</td>
+              <td>Falta de un responsable formal de logística interna; urgencia productiva que posterga el reordenamiento en U.</td>
+              <td>Programar un fin de semana de parada técnica y asignar a un operario referente el control de pasillos y demolición de cruces.</td>
+            </tr>
+            <tr>
+              <td><strong>Desgaste excesivo de chapa de madera (0,7 mm)</strong></td>
+              <td>Lijado manual (Diego) / Calidad</td>
+              <td>Aprendizaje por ensayo y error sin calibración sensorial reglamentada ni muestras testigo de referencia.</td>
+              <td>Crear muestrarios táctiles de lijado (granos 40/120/240) y capacitar formalmente a ingresantes antes de tocar enchapado.</td>
+            </tr>
+            <tr>
+              <td><strong>Línea integral de mesas paralizable por una persona</strong></td>
+              <td>Armado de mesas / Dirección General</td>
+              <td>Conocimiento tácito atesorado en un único operario veterano sin documentación ni traspaso formal.</td>
+              <td>Establecer un programa de sombra laboral (shadowing) emparejando a Diego con el oficial de mesas durante 1 mes.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Paneles de Diagnóstico Cruzado -->
+        <div class="grid-2col">
+          <div class="info-card">
+            <h4>De la Máquina a la Estructura Organizativa</h4>
+            <p>Los problemas detectados en planta (tiempos muertos, cuellos de botella y desajustes dimensionales) rara vez se originan en fallas mecánicas aisladas. El diagnóstico confirma que derivan de brechas organizativas: la falta de mandos medios sobrecarga a Mauro, forzando una gestión de urgencias que posterga la estandarización técnica.</p>
+          </div>
+          <div class="info-card">
+            <h4>Factibilidad de las Oportunidades Propuestas</h4>
+            <p>Ninguna de las cuatro propuestas de articulación demanda financiamiento crediticio ni adquisición de nueva maquinaria importada. Se basan estrictamente en ordenar responsabilidades, protocolizar el flujo de información y transferir saberes tácitos a soportes visuales accesibles en banco.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 6 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 7: SÍNTESIS INTERPRETATIVA FINAL & CONCLUSIONES DE GESTIÓN
+         ==================================================================== -->
+    <section class="page" id="page-7">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Síntesis Interpretativa & Conclusiones</span>
+        </div>
+
+        <div class="section-title">
+          <span>9. Síntesis Interpretativa: la Organización como Facilitador y Límite del Desarrollo Industrial</span>
+          <span class="badge-sec">Síntesis Final (600 palabras)</span>
+        </div>
+
+        <div class="sintesis-texto">
+          <p>
+            <strong>La paradoja tecnológica de la PyME manufacturera nacional.</strong> La trayectoria de Gran Sasso S.R.L. encarna de manera paradigmática la compleja articulación sociotécnica que define a las PyMEs industriales argentinas. El análisis diacrónico iniciado en la Bitácora (TP2), profundizado en la ingeniería operativa de la Silla Ginger (TP3) y consolidado en este diagnóstico organizacional (TP4), permite responder a la pregunta central de la cátedra: <em>la forma en que se organiza la empresa actúa como un formidable motor de agilidad productiva pero, simultáneamente, como un techo estructural que dificulta la escalabilidad y la sustentabilidad operativa a largo plazo.</em>
+          </p>
+          <p>
+            Por un lado, la organización exhibe <strong>fortalezas socioterritoriales indiscutibles</strong>. Su inserción estratégica en el clúster productivo de General San Martín permite tejer una red de proximidad casi inmediata: abastecimiento de caños metálicos a 50 metros, servicios de pintura epoxi a 150 metros y una herrería satélite familiar operada por el hermano del titular. Esta cercanía física y comunitaria reduce los costos de transacción y fletes a niveles mínimos, dotando a la firma de una flexibilidad competitiva notable para absorber la demanda traccionada por pauta digital en redes sociales. Asimismo, la presencia de equipamiento de frontera técnica internacional —como el curvado dieléctrico en alta frecuencia y el brazo robótico de 6 ejes con 4 motores— otorga una ventaja de producto inalcanzable para la mayoría de sus competidores del sector maderero.
+          </p>
+          <p>
+            Sin embargo, la dimensión organizacional expone <strong>tensiones críticas que limitan el aprovechamiento de ese potencial tecnológico</strong>. La más determinante es la <em>hipercentralización de la toma de decisiones en la figura de Mauro</em>. Al asumir en simultáneo la dirección estratégica, la compra de maquinaria importada, la coordinación de planta, la asignación cotidiana de planillas y la inspección final de calidad, se genera un cuello de botella directivo que asfixia la gestión. Los problemas operativos no se resuelven por falta de inversión económica, sino por ausencia de tiempo gerencial para coordinar soluciones: el layout desordenado con 65 metros de transporte y el cuello de botella manual en el perforado persisten porque la urgencia del día a día posterga las mejoras de método.
+          </p>
+          <p>
+            A esta sobrecarga se suma una <strong>marcada fragmentación informacional y sociolaboral</strong>. Mientras la oficina técnica opera con diseño paramétrico tridimensional, el piso de taller se gobierna mediante planillas físicas de papel que se manchan de cola, se degradan con el polvillo de lijado y se reimprimen diariamente ante cualquier desfasaje. En el plano del capital humano, el modelo de aprendizaje empírico por imitación (donde el 70% de los operarios aprende de sus pares veteranos, como testimonia Diego) asegura un fuerte compromiso identitario, pero genera dos riesgos severos: la dispersión en la calidad de acabado (como el lijado excesivo que desgasta la chapa de 0,7 mm) y la extrema vulnerabilidad que representan los tres puestos fijos monopersonales (laqueador, tapicero y responsable de mesas), cuya eventual ausencia detiene el flujo de fabricación.
+          </p>
+          <p>
+            <strong>El rol del Diseño Industrial como disciplina organizadora.</strong> Desde la perspectiva proyectual de nuestra disciplina, este diagnóstico confirma que el diseño no culmina en la geometría, la ergonomía o el renderizado de la Silla Ginger, sino que debe intervenir en el diseño de los sistemas de trabajo, las interfaces de información y los dispositivos auxiliares de producción. Formalizar mandos medios de coordinación, introducir instructivos visuales de trabajo estandarizado (SOP), implementar un tablero Kanban físico-digital para erradicar las planillas volátiles y estructurar matrices de polivalencia tutelada constituyen intervenciones de bajísimo costo de capital pero de inmenso impacto en la productividad, la seguridad de los trabajadores y la madurez industrial de Gran Sasso S.R.L.
+          </p>
+        </div>
+
+        <!-- Plan de Metas de Madurez Organizacional -->
+        <div class="section-title" style="margin-top: 8px;">
+          <span>10. Plan de Fortalecimiento Organizacional: Metas de Madurez Sociotécnica</span>
+          <span class="badge-sec">Impacto Proyectual</span>
+        </div>
+
+        <div class="comparativa-grid">
+          <div class="comp-card">
+            <span class="comp-lbl">Redundancia de Puestos</span>
+            <div class="comp-vals">
+              <span class="comp-before">3 islas</span>
+              <span class="comp-after">0 islas</span>
+            </div>
+            <span class="comp-gain">Capacitación cruzada tutelada</span>
+          </div>
+          <div class="comp-card">
+            <span class="comp-lbl">Soporte Informacional</span>
+            <div class="comp-vals">
+              <span class="comp-before">Papel</span>
+              <span class="comp-after">Kanban</span>
+            </div>
+            <span class="comp-gain">Trazabilidad visual de piso</span>
+          </div>
+          <div class="comp-card">
+            <span class="comp-lbl">Scrap Chapa 0,7 mm</span>
+            <div class="comp-vals">
+              <span class="comp-before">Alto</span>
+              <span class="comp-after">Mínimo</span>
+            </div>
+            <span class="comp-gain">Muestrarios sensoriales SOP</span>
+          </div>
+          <div class="comp-card">
+            <span class="comp-lbl">Tiempo Directivo Libre</span>
+            <div class="comp-vals">
+              <span class="comp-before">10%</span>
+              <span class="comp-after">45%</span>
+            </div>
+            <span class="comp-gain">Delegación en mando medio</span>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 7 de 7</span>
+      </footer>
+    </section>
+
+  </div>
+
+</body>
+</html>

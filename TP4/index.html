@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP4 - Análisis de la Organización: Gran Sasso S.R.L. | Gestión Industrial FADU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Barra superior interactiva de edición y guardado -->
+  <header class="top-toolbar">
+    <div class="toolbar-info">
+      <span class="toolbar-badge">Modo Edición en Vivo</span>
+      <span>Hacé clic sobre cualquier texto o celda para escribir directamente</span>
+      <span class="save-status" id="save-status">Listo para editar</span>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn" onclick="limpiarBorrador()" title="Restablecer plantilla en blanco">Restaurar Plantilla</button>
+      <button class="btn btn-primary" onclick="window.print()" title="Imprimir o guardar como PDF en A4">🖨️ Exportar a PDF</button>
+    </div>
+  </header>
+
+  <div class="sheet-container">
+
+    <!-- ====================================================================
+         PÁGINA 1: PORTADA, DATOS, PREGUNTA CENTRAL Y CONTINUIDAD
+         ==================================================================== -->
+    <section class="page" id="page-1">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Cátedra Raquel Ariza (Adj. Martín Escobar)</span>
+          <span>Trabajo Práctico N.º 4 · FADU - UBA</span>
+        </div>
+
+        <div style="border-bottom: 2px solid #1e293b; padding-bottom: 8px; margin-bottom: 10px;">
+          <h1 style="font-size: 15pt; font-weight: 800; color: #1e293b; text-transform: uppercase;">Análisis de la Organización de la Empresa</h1>
+          <div style="font-size: 8.8pt; color: #64748b; font-weight: 500;">Caso de Estudio: Gran Sasso S.R.L. (San Andrés, Partido de Gral. San Martín)</div>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>Grupo e Integrantes</strong>
+            <span contenteditable="true" data-id="p1-meta-grupo">Grupo 5 · Gustavo Saucedo · Nicolás Cloos · Agustín Coria</span>
+          </div>
+          <div class="meta-item">
+            <strong>Foco / Recorte de Estudio</strong>
+            <span contenteditable="true" data-id="p1-meta-recorte">Línea de producción de la Silla Ginger y operación de taller</span>
+          </div>
+        </div>
+
+        <!-- Pregunta Central -->
+        <div class="guide-box">
+          <strong>Pregunta Central de Investigación Organizacional:</strong>
+          <p><em>«¿La forma en que se organiza Gran Sasso S.R.L. facilita o dificulta el desarrollo de su actividad productiva, la incorporación tecnológica y sus oportunidades de mejora continua?»</em></p>
+        </div>
+
+        <!-- 1. Continuidad con los TP anteriores -->
+        <div class="section-title">
+          <span>1. Continuidad Metodológica con los Trabajos Anteriores</span>
+          <span class="section-tag">Punto de Partida</span>
+        </div>
+
+        <div class="editable-box">
+          <div class="editable-title">Articulación: de la Bitácora (TP2) y el Proceso de Planta (TP3) a la Organización (TP4)</div>
+          <div contenteditable="true" data-id="p1-continuidad-texto" class="ph-text">
+            En el TP2 relevamos a Gran Sasso S.R.L. a nivel territorial y estratégico (su ubicación en el clúster de San Martín, historia familiar, dotación de ~18 personas y canal comercial en redes). En el TP3 delimitamos el flujo operativo de la Silla Ginger en planta, mapeando 16 operaciones, esperas en prensado y el cuello de botella en perforado manual. En este TP4 analizamos cómo la estructura de responsabilidades, la comunicación interna y los saberes del personal sostienen el funcionamiento de la fábrica y condicionan las oportunidades de mejora.
+          </div>
+        </div>
+
+        <!-- 2. Caracterización del Objeto / Producto Testigo -->
+        <div class="section-title" style="margin-top: 10px;">
+          <span>2. Caracterización y Delimitación del Objeto de Estudio</span>
+          <span class="section-tag">Silla Ginger</span>
+        </div>
+
+        <div class="editable-box">
+          <div class="editable-title">El Producto Testigo como Integrador de Áreas</div>
+          <div contenteditable="true" data-id="p1-producto-texto" class="ph-text">
+            El recorte se centra en el proceso productivo de la Silla Ginger, un producto que tracciona la totalidad de los sectores de la empresa: diseño paramétrico, abastecimiento de láminas de Misiones, prensado dieléctrico en alta frecuencia, mecanizado en celda robótica de 6 ejes, carpintería tradicional, lijado manual, tapicería textil/cuero y cabina de lustre. Gran Sasso cuenta con 12 operarios en planta y entre 5 y 6 trabajadores en administración, ventas y diseño.
+          </div>
+        </div>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 1 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 2: ORGANIGRAMA FORMAL VS. REAL
+         ==================================================================== -->
+    <section class="page" id="page-2">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Estructura Formal vs. Organización Real</span>
+        </div>
+
+        <div class="section-title">
+          <span>2. Estructura Organizativa: Organigrama Formal y Organización Real</span>
+          <span class="section-tag">Herramienta 1</span>
+        </div>
+
+        <div class="guide-box">
+          <strong>Pautas de Cátedra:</strong>
+          <p>Reconstruir el organigrama a partir de las entrevistas y la observación. Contrastar las áreas formales con las funciones reales, identificando quién decide, quién ejecuta, qué funciones se concentran en Mauro y qué áreas no tienen responsable formal.</p>
+        </div>
+
+        <!-- Marco para el Organigrama -->
+        <div class="editable-title">A. Diagrama del Organigrama Reconstruido</div>
+        <div class="diagram-frame" id="frame-organigrama" contenteditable="true" data-id="p2-diagrama-organigrama">
+          <div class="ph-text" style="text-align: center;">
+            <strong style="color: #475569; display: block; margin-bottom: 4px;">[ESPACIO PARA PEGAR O INSERTAR EL DIAGRAMA DEL ORGANIGRAMA]</strong>
+            <span>Hacé clic aquí para pegar la imagen de tu organigrama (Ctrl+V) o escribir la estructura en texto.</span>
+          </div>
+        </div>
+
+        <!-- Tabla Comparativa: Formal vs Real -->
+        <div class="editable-title" style="margin-top: 6px;">B. Análisis Comparativo: Estructura Formal vs. Organización Real</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 24%;">Aspecto Relevado</th>
+              <th style="width: 38%;">Estructura Formal Proyectada</th>
+              <th style="width: 38%;">Organización Real en Planta (Lo Observado)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Áreas y Puestos</strong></td>
+              <td contenteditable="true" data-id="p2-t1-r1-c2" class="ph-text">Dirección General, Administración/Ventas, Diseño de Producto y Producción en Taller.</td>
+              <td contenteditable="true" data-id="p2-t1-r1-c3" class="ph-text">Límites informales; las oficinas asumen múltiples tareas administrativas y en planta los operarios rotan de tarea.</td>
+            </tr>
+            <tr>
+              <td><strong>Toma de Decisiones</strong></td>
+              <td contenteditable="true" data-id="p2-t1-r2-c2" class="ph-text">Decisiones estratégicas compartidas y delegación operativa en mandos de taller.</td>
+              <td contenteditable="true" data-id="p2-t1-r2-c3" class="ph-text">Hipercentralización en Mauro: decide compras de máquinas, asigna planillas diarias y resuelve dudas de banco.</td>
+            </tr>
+            <tr>
+              <td><strong>Control de Calidad</strong></td>
+              <td contenteditable="true" data-id="p2-t1-r3-c2" class="ph-text">Control sistemático de piezas por estación de trabajo y normas de calidad.</td>
+              <td contenteditable="true" data-id="p2-t1-r3-c3" class="ph-text">Calidad basada en la experiencia táctil de los operarios veteranos e inspección ocular final de Mauro.</td>
+            </tr>
+            <tr>
+              <td><strong>Brechas y Sobrecargas</strong></td>
+              <td contenteditable="true" data-id="p2-t1-r4-c2" class="ph-text">Roles definidos con puestos cubiertos de manera estable e independiente.</td>
+              <td contenteditable="true" data-id="p2-t1-r4-c3" class="ph-text">Falta de encargado de planta y planificador formal; tres puestos fijos críticos dependen de una sola persona.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 2 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 3: MAPA DE RELACIONES Y COLABORACIÓN
+         ==================================================================== -->
+    <section class="page" id="page-3">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Redes y Mapa de Colaboración</span>
+        </div>
+
+        <div class="section-title">
+          <span>3. Mapa de Relaciones y Colaboración (Ecosistema Interno y Red Territorial)</span>
+          <span class="section-tag">Herramienta 2</span>
+        </div>
+
+        <div class="guide-box">
+          <strong>Pautas de Cátedra:</strong>
+          <p>Mapear los vínculos internos (entre áreas/personal) y externos (con el clúster de San Martín y la cadena de suministro). Analizar canal, frecuencia y calidad de la relación.</p>
+        </div>
+
+        <!-- Marco para el Mapa de Red -->
+        <div class="editable-title">A. Esquema de Red y Relaciones de Colaboración</div>
+        <div class="diagram-frame" id="frame-relaciones" contenteditable="true" data-id="p3-diagrama-red">
+          <div class="ph-text" style="text-align: center;">
+            <strong style="color: #475569; display: block; margin-bottom: 4px;">[ESPACIO PARA INSERTAR EL MAPA GRÁFICO DE RELACIONES]</strong>
+            <span>Hacé clic aquí para pegar imagen o esquema de los vínculos de Gran Sasso con el barrio y proveedores.</span>
+          </div>
+        </div>
+
+        <!-- Tabla de Relaciones -->
+        <div class="editable-title" style="margin-top: 6px;">B. Ficha de Registro de Vínculos de Colaboración</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 22%;">Actor / Área</th>
+              <th style="width: 10%;">Ámbito</th>
+              <th style="width: 13%;">Tipo Vínculo</th>
+              <th style="width: 15%;">Canal</th>
+              <th style="width: 12%;">Frecuencia</th>
+              <th style="width: 11%;">Calidad</th>
+              <th style="width: 17%;">Observaciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Dirección ↔ Taller</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r1-c2">Interno</td>
+              <td contenteditable="true" data-id="p3-t1-r1-c3">Directo / Fuerte</td>
+              <td contenteditable="true" data-id="p3-t1-r1-c4">Oral / Planillas</td>
+              <td contenteditable="true" data-id="p3-t1-r1-c5">Diaria</td>
+              <td contenteditable="true" data-id="p3-t1-r1-c6">Buena</td>
+              <td contenteditable="true" data-id="p3-t1-r1-c7" class="ph-text">Comunicación fluida cara a cara en banco.</td>
+            </tr>
+            <tr>
+              <td><strong>Diseño ↔ Celda Robótica</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r2-c2">Interno</td>
+              <td contenteditable="true" data-id="p3-t1-r2-c3">Técnico</td>
+              <td contenteditable="true" data-id="p3-t1-r2-c4">Digital / Red</td>
+              <td contenteditable="true" data-id="p3-t1-r2-c5">Semanal</td>
+              <td contenteditable="true" data-id="p3-t1-r2-c6">Buena</td>
+              <td contenteditable="true" data-id="p3-t1-r2-c7" class="ph-text">Paso de modelos 3D y código CAM de fresado.</td>
+            </tr>
+            <tr>
+              <td><strong>Herrería Satélite (Hermano)</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r3-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r3-c3">Familiar / Crítico</td>
+              <td contenteditable="true" data-id="p3-t1-r3-c4">WhatsApp / Presencial</td>
+              <td contenteditable="true" data-id="p3-t1-r3-c5">Semanal</td>
+              <td contenteditable="true" data-id="p3-t1-r3-c6">Muy buena</td>
+              <td contenteditable="true" data-id="p3-t1-r3-c7" class="ph-text">Fabrica bases metálicas; alta confianza y dependencia.</td>
+            </tr>
+            <tr>
+              <td><strong>Proveedor Metales (50 m)</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r4-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r4-c3">Comercial directo</td>
+              <td contenteditable="true" data-id="p3-t1-r4-c4">Mostrador / Teléfono</td>
+              <td contenteditable="true" data-id="p3-t1-r4-c5">Semanal</td>
+              <td contenteditable="true" data-id="p3-t1-r4-c6">Óptima</td>
+              <td contenteditable="true" data-id="p3-t1-r4-c7" class="ph-text">Cercanía física que anula costos de flete.</td>
+            </tr>
+            <tr>
+              <td><strong>Pintura Epoxi (150 m)</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r5-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r5-c3">Servicio local</td>
+              <td contenteditable="true" data-id="p3-t1-r5-c4">Personal / Flete corto</td>
+              <td contenteditable="true" data-id="p3-t1-r5-c5">A pedido</td>
+              <td contenteditable="true" data-id="p3-t1-r5-c6">Buena</td>
+              <td contenteditable="true" data-id="p3-t1-r5-c7" class="ph-text">Acabado para herrería sin demoras de traslado.</td>
+            </tr>
+            <tr>
+              <td><strong>Costurera Barrial</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r6-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r6-c3">Tercerización</td>
+              <td contenteditable="true" data-id="p3-t1-r6-c4">Retiro en mano</td>
+              <td contenteditable="true" data-id="p3-t1-r6-c5">Semanal</td>
+              <td contenteditable="true" data-id="p3-t1-r6-c6">Media</td>
+              <td contenteditable="true" data-id="p3-t1-r6-c7" class="ph-text">Confección de fundas; vulnerable a sus tiempos.</td>
+            </tr>
+            <tr>
+              <td><strong>Proveedores Láminas Misiones</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r7-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r7-c3">Insumo clave</td>
+              <td contenteditable="true" data-id="p3-t1-r7-c4">Mail / Teléfono</td>
+              <td contenteditable="true" data-id="p3-t1-r7-c5">Mensual</td>
+              <td contenteditable="true" data-id="p3-t1-r7-c6">Media</td>
+              <td contenteditable="true" data-id="p3-t1-r7-c7" class="ph-text">Envío de pallets 1,30x2,60 m; flete de larga distancia.</td>
+            </tr>
+            <tr>
+              <td><strong>Clientes B2C / Redes</strong></td>
+              <td contenteditable="true" data-id="p3-t1-r8-c2">Externo</td>
+              <td contenteditable="true" data-id="p3-t1-r8-c3">Demanda digital</td>
+              <td contenteditable="true" data-id="p3-t1-r8-c4">Instagram / Web</td>
+              <td contenteditable="true" data-id="p3-t1-r8-c5">Diaria</td>
+              <td contenteditable="true" data-id="p3-t1-r8-c6">Fluida</td>
+              <td contenteditable="true" data-id="p3-t1-r8-c7" class="ph-text">Tracción por pauta publicitaria en Meta.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 3 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 4: FLUJO DE INFORMACIÓN CLAVE
+         ==================================================================== -->
+    <section class="page" id="page-4">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Flujo de Información y Canales</span>
+        </div>
+
+        <div class="section-title">
+          <span>4. Flujo de Información Clave: del Pedido al Despacho</span>
+          <span class="section-tag">Herramienta 3</span>
+        </div>
+
+        <div class="guide-box">
+          <strong>Pautas de Cátedra:</strong>
+          <p>Analizar un circuito informacional relevante (ej: pedido comercial $\rightarrow$ programación $\rightarrow$ planillas de taller $\rightarrow$ entrega). Evaluar si la información es clara, oportuna, confiable y qué fallas o soportes informales se detectan.</p>
+        </div>
+
+        <!-- Marco para el Diagrama de Flujo -->
+        <div class="editable-title">A. Diagrama del Circuito Informacional Elegido</div>
+        <div class="diagram-frame" id="frame-flujo-info" contenteditable="true" data-id="p4-diagrama-flujo">
+          <div class="ph-text" style="text-align: center;">
+            <strong style="color: #475569; display: block; margin-bottom: 4px;">[ESPACIO PARA INSERTAR EL DIAGRAMA DE FLUJO DE INFORMACIÓN]</strong>
+            <span>Hacé clic aquí para pegar el esquema lineal (Pedido $\rightarrow$ Admin $\rightarrow$ Planilla Mauro $\rightarrow$ Taller $\rightarrow$ Despacho).</span>
+          </div>
+        </div>
+
+        <!-- Tabla de Auditoría de Información -->
+        <div class="editable-title" style="margin-top: 6px;">B. Auditoría de los Circuitos de Información</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Información</th>
+              <th style="width: 15%;">Quién la Genera</th>
+              <th style="width: 15%;">Quién la Recibe</th>
+              <th style="width: 15%;">Soporte / Canal</th>
+              <th style="width: 15%;">Uso Concreto</th>
+              <th style="width: 20%;">Problema Detectado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Pedido Comercial</strong></td>
+              <td contenteditable="true" data-id="p4-t1-r1-c2">Ventas / Cliente</td>
+              <td contenteditable="true" data-id="p4-t1-r1-c3">Administración</td>
+              <td contenteditable="true" data-id="p4-t1-r1-c4">Meta / Web / Chat</td>
+              <td contenteditable="true" data-id="p4-t1-r1-c5">Cargar pedido</td>
+              <td contenteditable="true" data-id="p4-t1-r1-c6" class="ph-text">Datos dispersos en mensajes no formalizados.</td>
+            </tr>
+            <tr>
+              <td><strong>Planillas de Taller</strong></td>
+              <td contenteditable="true" data-id="p4-t1-r2-c2">Mauro (Dirección)</td>
+              <td contenteditable="true" data-id="p4-t1-r2-c3">Operarios de banco</td>
+              <td contenteditable="true" data-id="p4-t1-r2-c4">Papel impreso diario</td>
+              <td contenteditable="true" data-id="p4-t1-r2-c5">Secuencia de armado</td>
+              <td contenteditable="true" data-id="p4-t1-r2-c6" class="ph-text">Se reimprimen a diario; expuestas a suciedad/cola.</td>
+            </tr>
+            <tr>
+              <td><strong>Piezas Rajadas / Fallas</strong></td>
+              <td contenteditable="true" data-id="p4-t1-r3-c2">Diego / Operarios</td>
+              <td contenteditable="true" data-id="p4-t1-r3-c3">Mauro / Carpintería</td>
+              <td contenteditable="true" data-id="p4-t1-r3-c4">Verbal en el puesto</td>
+              <td contenteditable="true" data-id="p4-t1-r3-c5">Reclamar arreglo</td>
+              <td contenteditable="true" data-id="p4-t1-r3-c6" class="ph-text">No queda registro escrito ni cálculo de scrap.</td>
+            </tr>
+            <tr>
+              <td><strong>Órdenes a Herrería</strong></td>
+              <td contenteditable="true" data-id="p4-t1-r4-c2">Mauro</td>
+              <td contenteditable="true" data-id="p4-t1-r4-c3">Taller del hermano</td>
+              <td contenteditable="true" data-id="p4-t1-r4-c4">WhatsApp / Directo</td>
+              <td contenteditable="true" data-id="p4-t1-r4-c5">Lotes de patas</td>
+              <td contenteditable="true" data-id="p4-t1-r4-c6" class="ph-text">Informal; riesgo de olvido o desfasaje de entrega.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 4 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 5: CAPITAL HUMANO, SABERES Y POLIVALENCIA
+         ==================================================================== -->
+    <section class="page" id="page-5">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Capital Humano y Saberes Críticos</span>
+        </div>
+
+        <div class="section-title">
+          <span>5. Gestión del Capital Humano, Saberes y Polivalencia</span>
+          <span class="section-tag">Herramienta 4</span>
+        </div>
+
+        <div class="guide-box">
+          <strong>Pautas de Cátedra:</strong>
+          <p>Indagar cómo se aprende el trabajo (formación empírica vs. oficio), qué puestos pueden rotar, qué saberes están concentrados en una sola persona, y las condiciones de participación y seguridad.</p>
+        </div>
+
+        <!-- Tabla de Dimensiones de Capital Humano -->
+        <div class="editable-title">A. Dimensiones de Capital Humano Relevadas</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Dimensión</th>
+              <th style="width: 38%;">Situación Diagnosticada en Gran Sasso</th>
+              <th style="width: 37%;">Evidencia de Campo Relevada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Capacitación e Inducción</strong></td>
+              <td contenteditable="true" data-id="p5-t1-r1-c2" class="ph-text">30% entra con oficio formal maderero; 70% se capacita en planta aprendiendo por observación de compañeros.</td>
+              <td contenteditable="true" data-id="p5-t1-r1-c3" class="ph-text">Testimonio de Diego: "no soy carpintero, fui aprendiendo acá". Sin manuales escritos.</td>
+            </tr>
+            <tr>
+              <td><strong>Polivalencia y Rotación</strong></td>
+              <td contenteditable="true" data-id="p5-t1-r2-c2" class="ph-text">Alta rotación en lijado, ensamble de cajas y torno; pero coexisten 3 puestos fijos que no rotan.</td>
+              <td contenteditable="true" data-id="p5-t1-r2-c3" class="ph-text">Laqueador, tapicero y la persona de mesas son puestos fijos únicos (Audio 01 y 05).</td>
+            </tr>
+            <tr>
+              <td><strong>Participación en Mejoras</strong></td>
+              <td contenteditable="true" data-id="p5-t1-r3-c2" class="ph-text">Cultura abierta a escuchar ideas prácticas de los trabajadores para agilizar tareas.</td>
+              <td contenteditable="true" data-id="p5-t1-r3-c3" class="ph-text">Calibración del rodillo de la cortadora láser sugerida por los operarios (Audio 01).</td>
+            </tr>
+            <tr>
+              <td><strong>Seguridad y Ergonomía</strong></td>
+              <td contenteditable="true" data-id="p5-t1-r4-c2" class="ph-text">Equipamiento básico presente; fatiga postural y persistencia de polvo de lijado en el ambiente.</td>
+              <td contenteditable="true" data-id="p5-t1-r4-c3" class="ph-text">Diego sugiere extractores de aire en altura para mejorar la respiración en taller (Audio 07).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Matriz Simple de Polivalencia -->
+        <div class="editable-title" style="margin-top: 6px;">B. Matriz Simple de Polivalencia por Puestos de Taller</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Puesto / Sector</th>
+              <th style="width: 25%;">Dinámica de Rotación</th>
+              <th style="width: 25%;">Personal Calificado</th>
+              <th style="width: 25%;">Nivel de Riesgo Operativo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Prensado Alta Frecuencia</strong></td>
+              <td contenteditable="true" data-id="p5-t2-r1-c2" class="ph-text">Baja rotación (puesto técnico)</td>
+              <td contenteditable="true" data-id="p5-t2-r1-c3" class="ph-text">2 operarios experimentados</td>
+              <td contenteditable="true" data-id="p5-t2-r1-c4" class="ph-text">Medio</td>
+            </tr>
+            <tr>
+              <td><strong>Lijado y Armado de Cajas</strong></td>
+              <td contenteditable="true" data-id="p5-t2-r2-c2" class="ph-text">Alta rotación ("voy donde me necesitan")</td>
+              <td contenteditable="true" data-id="p5-t2-r2-c3" class="ph-text">Diego + 3 a 4 operarios</td>
+              <td contenteditable="true" data-id="p5-t2-r2-c4" class="ph-text">Bajo (fácilmente reemplazable)</td>
+            </tr>
+            <tr>
+              <td><strong>Cabina de Laqueado / Lustre</strong></td>
+              <td contenteditable="true" data-id="p5-t2-r3-c2" class="ph-text">Puesto fijo (no rota)</td>
+              <td contenteditable="true" data-id="p5-t2-r3-c3" class="ph-text">1 solo oficial laqueador</td>
+              <td contenteditable="true" data-id="p5-t2-r3-c4" class="ph-text"><strong>Alto / Crítico</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Línea Integral de Mesas</strong></td>
+              <td contenteditable="true" data-id="p5-t2-r4-c2" class="ph-text">Monopersonal de punta a punta</td>
+              <td contenteditable="true" data-id="p5-t2-r4-c3" class="ph-text">1 solo operario especializado</td>
+              <td contenteditable="true" data-id="p5-t2-r4-c4" class="ph-text"><strong>Alto / Crítico</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Tapicería y Confección</strong></td>
+              <td contenteditable="true" data-id="p5-t2-r5-c2" class="ph-text">Puesto fijo artesanal</td>
+              <td contenteditable="true" data-id="p5-t2-r5-c3" class="ph-text">1 oficial de tapizado</td>
+              <td contenteditable="true" data-id="p5-t2-r5-c4" class="ph-text">Medio - Alto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 5 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 6: MATRICES DE DIAGNÓSTICO ORGANIZACIONAL
+         ==================================================================== -->
+    <section class="page" id="page-6">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Matrices de Diagnóstico y Articulación Cruzada</span>
+        </div>
+
+        <div class="section-title">
+          <span>6. Matrices de Diagnóstico Organizacional</span>
+          <span class="section-tag">Herramienta 5</span>
+        </div>
+
+        <!-- Ficha Oficial de Cátedra -->
+        <div class="editable-title">A. Ficha de Diagnóstico Organizacional (Oficial Cátedra Ariza)</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 16%;">Tema</th>
+              <th style="width: 20%;">Hallazgo Principal</th>
+              <th style="width: 18%;">Evidencia de Campo</th>
+              <th style="width: 15%;">Fortaleza</th>
+              <th style="width: 15%;">Problema / Tensión</th>
+              <th style="width: 16%;">Oportunidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Organigrama</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r1-c2" class="ph-text">Centralización en Mauro.</td>
+              <td contenteditable="true" data-id="p6-t1-r1-c3" class="ph-text">Decide compras y planillas.</td>
+              <td contenteditable="true" data-id="p6-t1-r1-c4" class="ph-text">Mando ágil.</td>
+              <td contenteditable="true" data-id="p6-t1-r1-c5" class="ph-text">Sobrecarga de tareas.</td>
+              <td contenteditable="true" data-id="p6-t1-r1-c6" class="ph-text">Delegar en jefe de taller.</td>
+            </tr>
+            <tr>
+              <td><strong>Relaciones Internas</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r2-c2" class="ph-text">Trato directo informal.</td>
+              <td contenteditable="true" data-id="p6-t1-r2-c3" class="ph-text">Diálogo oral continuo.</td>
+              <td contenteditable="true" data-id="p6-t1-r2-c4" class="ph-text">Resolución rápida.</td>
+              <td contenteditable="true" data-id="p6-t1-r2-c5" class="ph-text">Sin registro de cambios.</td>
+              <td contenteditable="true" data-id="p6-t1-r2-c6" class="ph-text">Tablero visual de piso.</td>
+            </tr>
+            <tr>
+              <td><strong>Relaciones Externas</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r3-c2" class="ph-text">Anclaje en clúster local.</td>
+              <td contenteditable="true" data-id="p6-t1-r3-c3" class="ph-text">Insumos a 50 y 150 m.</td>
+              <td contenteditable="true" data-id="p6-t1-r3-c4" class="ph-text">Cero costo de flete.</td>
+              <td contenteditable="true" data-id="p6-t1-r3-c5" class="ph-text">Dependencia familiar.</td>
+              <td contenteditable="true" data-id="p6-t1-r3-c6" class="ph-text">Tener segundas fuentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Flujo Información</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r4-c2" class="ph-text">Planillas en papel.</td>
+              <td contenteditable="true" data-id="p6-t1-r4-c3" class="ph-text">Reimpresión diaria (Audio 04).</td>
+              <td contenteditable="true" data-id="p6-t1-r4-c4" class="ph-text">Sin PCs en banco.</td>
+              <td contenteditable="true" data-id="p6-t1-r4-c5" class="ph-text">Desactualización.</td>
+              <td contenteditable="true" data-id="p6-t1-r4-c6" class="ph-text">Fichas de lote estables.</td>
+            </tr>
+            <tr>
+              <td><strong>Capital Humano</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r5-c2" class="ph-text">70% aprende en planta.</td>
+              <td contenteditable="true" data-id="p6-t1-r5-c3" class="ph-text">Testimonio de Diego.</td>
+              <td contenteditable="true" data-id="p6-t1-r5-c4" class="ph-text">Compromiso.</td>
+              <td contenteditable="true" data-id="p6-t1-r5-c5" class="ph-text">Sin manuales escritos.</td>
+              <td contenteditable="true" data-id="p6-t1-r5-c6" class="ph-text">Instructivos visuales.</td>
+            </tr>
+            <tr>
+              <td><strong>Polivalencia</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r6-c2" class="ph-text">Rotación vs. 3 fijos.</td>
+              <td contenteditable="true" data-id="p6-t1-r6-c3" class="ph-text">Puestos únicos en mesas/laca.</td>
+              <td contenteditable="true" data-id="p6-t1-r6-c4" class="ph-text">Flexibilidad media.</td>
+              <td contenteditable="true" data-id="p6-t1-r6-c5" class="ph-text">Parate ante ausencias.</td>
+              <td contenteditable="true" data-id="p6-t1-r6-c6" class="ph-text">Capacitación cruzada.</td>
+            </tr>
+            <tr>
+              <td><strong>Cultura de Mejora</strong></td>
+              <td contenteditable="true" data-id="p6-t1-r7-c2" class="ph-text">Escucha activa directiva.</td>
+              <td contenteditable="true" data-id="p6-t1-r7-c3" class="ph-text">Rodillo láser textil.</td>
+              <td contenteditable="true" data-id="p6-t1-r7-c4" class="ph-text">Iniciativa propia.</td>
+              <td contenteditable="true" data-id="p6-t1-r7-c5" class="ph-text">Mejoras aisladas.</td>
+              <td contenteditable="true" data-id="p6-t1-r7-c6" class="ph-text">Reunión corta mensual.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Matriz de Conexión con TP2 y TP3 -->
+        <div class="editable-title" style="margin-top: 6px;">B. Articulación con Problemas Detectados en TP2 y TP3</div>
+        <table class="clean-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Problema de TP2 / TP3</th>
+              <th style="width: 20%;">Área o Actor</th>
+              <th style="width: 25%;">Causa Organizacional</th>
+              <th style="width: 30%;">Acción Propuesta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cuello de botella en agujereado</strong></td>
+              <td contenteditable="true" data-id="p6-t2-r1-c2">Mecanizado / Mauro</td>
+              <td contenteditable="true" data-id="p6-t2-r1-c3">Falta de tiempo directivo para programar la celda</td>
+              <td contenteditable="true" data-id="p6-t2-r1-c4" class="ph-text">Estandarizar dispositivo matricial con bujes.</td>
+            </tr>
+            <tr>
+              <td><strong>Layout con 65 m de transporte</strong></td>
+              <td contenteditable="true" data-id="p6-t2-r2-c2">Taller / Logística</td>
+              <td contenteditable="true" data-id="p6-t2-r2-c3">Urgencia del día a día que posterga ordenar la planta</td>
+              <td contenteditable="true" data-id="p6-t2-r2-c4" class="ph-text">Parada programada para redistribución celular en U.</td>
+            </tr>
+            <tr>
+              <td><strong>Desgaste de chapa de 0,7 mm</strong></td>
+              <td contenteditable="true" data-id="p6-t2-r3-c2">Lijado / Diego</td>
+              <td contenteditable="true" data-id="p6-t2-r3-c3">Aprendizaje por tanteo sin calibración sensorial reglada</td>
+              <td contenteditable="true" data-id="p6-t2-r3-c4" class="ph-text">Muestrarios táctiles de lija e instructivos de borde.</td>
+            </tr>
+            <tr>
+              <td><strong>Línea de mesas monopersonal</strong></td>
+              <td contenteditable="true" data-id="p6-t2-r4-c2">Armado de mesas</td>
+              <td contenteditable="true" data-id="p6-t2-r4-c3">Conocimiento exclusivo atesorado en una persona</td>
+              <td contenteditable="true" data-id="p6-t2-r4-c4" class="ph-text">Programa de tutoría emparejando a un ayudante.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 6 de 7</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 7: SÍNTESIS INTERPRETATIVA FINAL
+         ==================================================================== -->
+    <section class="page" id="page-7">
+      <div class="page-content">
+        <div class="doc-header">
+          <span class="subject">Gestión Industrial · Organización de la Empresa</span>
+          <span>Síntesis Interpretativa & Conclusiones</span>
+        </div>
+
+        <div class="section-title">
+          <span>7. Síntesis Interpretativa Final (500 a 700 palabras)</span>
+          <span class="section-tag">Conclusión del Grupo</span>
+        </div>
+
+        <div class="guide-box">
+          <strong>Pautas de Redacción:</strong>
+          <p>Conectar los aprendizajes de los tres trabajos y responder a la pregunta central:</p>
+          <p><em>¿La organización facilita o dificulta la actividad productiva y las oportunidades de mejora?</em></p>
+          <p style="font-size: 7.6pt; color: #64748b;">(Explicar qué facilita: clúster de San Martín, agilidad, máquinas modernas. Qué dificulta: sobrecarga en Mauro, planillas en papel, falta de instructivos y puestos sin relevo. Y el aporte del Diseño Industrial).</p>
+        </div>
+
+        <div class="editable-box" style="flex: 1; display: flex; flex-direction: column;">
+          <div class="editable-title">Texto Corrido de Síntesis del Grupo</div>
+          <div contenteditable="true" data-id="p7-sintesis-texto" class="ph-text" style="flex: 1; overflow-y: auto;">
+            <p style="margin-bottom: 6px;"><strong>La paradoja de la PyME manufacturera nacional.</strong> Gran Sasso S.R.L. muestra cómo la organización de una PyME actúa al mismo tiempo como un motor de agilidad y como un techo para su crecimiento...</p>
+            <p style="margin-bottom: 6px;"><strong>Fortalezas que facilitan la producción:</strong> La cercanía con proveedores en General San Martín (metales a 50 metros, pintura a 150 metros y la herrería del hermano) junto a máquinas de vanguardia como la prensa de alta frecuencia y los robots permiten responder con velocidad a la demanda de redes sociales...</p>
+            <p style="margin-bottom: 6px;"><strong>Tensiones organizativas que dificultan la mejora:</strong> La concentración de todas las decisiones en Mauro genera un cuello de botella directivo. Al no haber mandos medios ni tiempo liberado, los problemas operativos (el layout largo de 65 metros y el perforado manual del TP3) se postergan día a día. A esto se suma el uso de planillas en papel que se desactualizan y los tres puestos fijos que no tienen reemplazo si alguien se enferma...</p>
+            <p><strong>El rol del Diseño Industrial:</strong> El diseño no termina en la forma o el render de la Silla Ginger, sino que interviene en los sistemas de trabajo: diseñar dispositivos de perforado, instructivos visuales de lijado y tableros de información que hagan el trabajo más seguro, ordenado y previsible.</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP4 · Organización de la Empresa · Gran Sasso S.R.L. · Grupo 5</span>
+        <span class="page-number">Página 7 de 7</span>
+      </footer>
+    </section>
+
+  </div>
+
+  <!-- Script interactivo de autoguardado en LocalStorage -->
+  <script>
+    const STORAGE_KEY = 'TP4_GESTION_INDUSTRIAL_AUTOSAVE';
+
+    // Cargar contenido guardado al abrir
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedData = localStorage.getItem(STORAGE_KEY);
+      if (savedData) {
+        try {
+          const parsed = JSON.parse(savedData);
+          Object.keys(parsed).forEach(id => {
+            const el = document.querySelector(`[data-id="${id}"]`);
+            if (el) {
+              el.innerHTML = parsed[id];
+              el.classList.remove('ph-text'); // Quita el estilo de placeholder si fue editado
+            }
+          });
+          document.getElementById('save-status').textContent = 'Borrador cargado desde tu navegador';
+        } catch (e) {
+          console.error('Error al cargar datos guardados:', e);
+        }
+      }
+
+      // Escuchar cambios en todos los campos editables con debounce
+      let timeout = null;
+      document.querySelectorAll('[contenteditable="true"]').forEach(el => {
+        el.addEventListener('input', () => {
+          el.classList.remove('ph-text');
+          document.getElementById('save-status').textContent = 'Guardando cambios...';
+          clearTimeout(timeout);
+          timeout = setTimeout(guardarBorrador, 600);
+        });
+      });
+    });
+
+    // Guardar todos los campos en LocalStorage
+    function guardarBorrador() {
+      const data = {};
+      document.querySelectorAll('[data-id]').forEach(el => {
+        const id = el.getAttribute('data-id');
+        if (id) {
+          data[id] = el.innerHTML;
+        }
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      document.getElementById('save-status').textContent = `Guardado automáticamente a las ${timeStr}`;
+    }
+
+    // Limpiar borrador y restaurar plantilla original
+    function limpiarBorrador() {
+      if (confirm('¿Estás seguro de que querés borrar los cambios guardados en este navegador y restaurar la plantilla inicial?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        window.location.reload();
+      }
+    }
+  </script>
+
+</body>
+</html>

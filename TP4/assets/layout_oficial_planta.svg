@@ -1,0 +1,434 @@
+<svg viewBox="0 0 940 1200" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, sans-serif">
+<defs>
+
+      <filter id="shadow" x="-2%" y="-1.5%" width="104%" height="103%">
+        <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-opacity="0.06"/>
+      </filter>
+    
+</defs>
+<rect width="940" height="1200" fill="#ffffff" rx="6"/>
+
+      <g>
+        <rect x="30" y="10" width="430" height="22" rx="3" fill="#1e293b"/>
+        <text x="245.0" y="25" fill="#ffffff" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">CARPINTERÍA Y ESTRUCTURA (36×9 m)</text>
+      </g>
+    
+
+      <rect x="30" y="36" width="430" height="712" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    
+
+      <path d="M 185 44 L 185 738" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+      <path d="M 185 44 L 185 738" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+      
+      <!-- Pasillo transversal superior inter-sectores -->
+      <path d="M 185 121 L 460 121" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+      <path d="M 185 121 L 460 121" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- Pasillo transversal medio inter-sectores -->
+      <path d="M 185 401 L 460 401" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+      <path d="M 185 401 L 460 401" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+    
+
+      <rect x="260" y="48" width="188" height="52" rx="3" fill="#f1f5f9" stroke="#64748b" stroke-width="1.2"/>
+      <text x="354" y="71" font-size="8" font-weight="700" fill="#334155" text-anchor="middle">ALMACÉN DE VIRUTA</text>
+      <text x="354" y="86" font-size="6.5" fill="#64748b" text-anchor="middle">Extracción neumática y silos exteriores</text>
+    
+
+      <rect x="42" y="50" width="125" height="38" rx="2" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+      <text x="104" y="73" font-size="7.5" font-weight="700" fill="#92400e" text-anchor="middle">LIJADORA DE BANDA</text>
+    
+
+      <rect x="42" y="104" width="125" height="60" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="104" y="132" font-size="7.5" font-weight="600" fill="#475569" text-anchor="middle">ALMACÉN MP</text>
+      <text x="104" y="146" font-size="6.2" fill="#64748b" text-anchor="middle">Madera noble seleccionada</text>
+    
+
+      <rect x="215" y="141" width="135" height="75" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="282" y="174" font-size="8.5" font-weight="700" fill="#0369a1" text-anchor="middle">BRAZO 6 EJES</text>
+      <text x="282" y="190" font-size="7" fill="#0284c7" text-anchor="middle">(Robot 4 Motores · Fresado 3D)</text>
+      <text x="282" y="203" font-size="6" fill="#0369a1" text-anchor="middle">Mecanizado monocasco Silla Ginger</text>
+    
+
+      <rect x="365" y="141" width="82" height="32" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="382" cy="157" r="7" fill="#0284c7"/>
+      <text x="382" y="159.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="414" y="159.5" font-size="6.5" font-weight="600" fill="#0369a1">Rectificadora</text>
+    
+
+      <rect x="365" y="181" width="82" height="35" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="382" cy="198" r="7" fill="#0284c7"/>
+      <text x="382" y="200.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="414" y="200.5" font-size="6.5" font-weight="600" fill="#0369a1">Cepilladora</text>
+    
+
+      <rect x="42" y="181" width="125" height="35" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="60" cy="198" r="7" fill="#0284c7"/>
+      <text x="60" y="200.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="105" y="201" font-size="6.8" font-weight="600" fill="#0369a1">Espigadora</text>
+    
+
+      <rect x="215" y="231" width="135" height="28" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="282" y="248" font-size="6.8" font-weight="600" fill="#475569" text-anchor="middle">Almacenamiento en Proceso</text>
+    
+
+      <rect x="42" y="231" width="125" height="35" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="60" cy="248" r="7" fill="#0284c7"/>
+      <text x="60" y="250.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="105" y="251" font-size="6.8" font-weight="600" fill="#0369a1">Fresadora tupí</text>
+    
+
+      <rect x="42" y="281" width="125" height="35" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="60" cy="298" r="7" fill="#0284c7"/>
+      <text x="60" y="300.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="105" y="301" font-size="6.8" font-weight="600" fill="#0369a1">Mortajadora</text>
+    
+
+      <rect x="335" y="236" width="112" height="38" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="355" cy="255" r="7" fill="#0284c7"/>
+      <text x="355" y="257.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+      <text x="398" y="258" font-size="6.8" font-weight="600" fill="#0369a1">Sierra sin fin 1</text>
+
+      <rect x="335" y="286" width="112" height="38" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="355" cy="305" r="7" fill="#0284c7"/>
+      <text x="355" y="307.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+      <text x="398" y="308" font-size="6.8" font-weight="600" fill="#0369a1">Sierra sin fin 2</text>
+    
+
+      <rect x="42" y="331" width="125" height="65" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="104" y="358" font-size="8" font-weight="700" fill="#1d4ed8" text-anchor="middle">ARMADO ESTRUCTURA</text>
+      <text x="104" y="374" font-size="6.5" fill="#3b82f6" text-anchor="middle">(Bancos de Encastre y Prensado)</text>
+    
+
+      <rect x="235" y="416" width="212" height="65" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+      <text x="341" y="444" font-size="8.5" font-weight="700" fill="#0369a1" text-anchor="middle">SIERRA ESCUADRADORA</text>
+      <text x="341" y="460" font-size="6.8" fill="#0284c7" text-anchor="middle">Corte primario de tableros y bastidores</text>
+    
+
+      <rect x="42" y="416" width="65" height="175" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="74" y="504" font-size="7.5" font-weight="600" fill="#475569" text-anchor="middle" transform="rotate(-90 74 504)">ALMACÉN MADERA MACIZA</text>
+    
+
+      <rect x="235" y="496" width="145" height="42" rx="2" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+      <text x="307" y="521" font-size="7.8" font-weight="700" fill="#92400e" text-anchor="middle">LIJADORA PLANA</text>
+    
+
+      <rect x="235" y="551" width="212" height="52" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="341" y="574" font-size="7.8" font-weight="600" fill="#475569" text-anchor="middle">ALMACENAMIENTO DE TABLONES</text>
+      <text x="341" y="588" font-size="6.5" fill="#64748b" text-anchor="middle">Partes pre-mecanizadas listas para armado</text>
+    
+
+      <rect x="160" y="621" width="288" height="98" rx="3" fill="#e2e8f0" stroke="#64748b" stroke-width="1.4"/>
+      <text x="304" y="661" font-size="9" font-weight="700" fill="#1e293b" text-anchor="middle">RECEPCIÓN DE MATERIAS PRIMAS</text>
+      <text x="304" y="678" font-size="7" fill="#475569" text-anchor="middle">Ingreso Maderas (Misiones) · Descarga, control y pesaje</text>
+      <text x="304" y="692" font-size="6.2" fill="#64748b" text-anchor="middle">Control de humedad y estacionamiento</text>
+    
+
+      <rect x="50" y="730" width="140" height="18" rx="2" fill="#22c55e"/>
+      <text x="120" y="743" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">PORTÓN INGRESO 1 ▼</text>
+    
+
+      <text x="18" y="392.0" font-size="10" font-weight="800" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 18 392.0)">360 (36 m)</text>
+      <text x="245.0" y="763" font-size="8.5" font-weight="700" fill="#94a3b8" text-anchor="middle">90 (9 m)</text>
+    
+
+      <g>
+        <rect x="480" y="10" width="430" height="22" rx="3" fill="#1e293b"/>
+        <text x="695.0" y="25" fill="#ffffff" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">PRENSADO HF, LAQUEADO Y FINAL (36×9 m)</text>
+      </g>
+    
+
+      <rect x="480" y="36" width="430" height="712" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    
+
+      <path d="M 685 44 L 685 738" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+      <path d="M 685 44 L 685 738" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+      
+      <!-- Pasillo transversal superior inter-sectores -->
+      <path d="M 480 121 L 685 121" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+      <path d="M 480 121 L 685 121" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+
+      <!-- Pasillo transversal medio inter-sectores -->
+      <path d="M 480 401 L 685 401" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+      <path d="M 480 401 L 685 401" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4"/>
+    
+
+      <rect x="492" y="48" width="85" height="48" rx="2" fill="#ffedd5" stroke="#ea580c" stroke-width="1.3"/>
+      <text x="534" y="76" font-size="7.5" font-weight="700" fill="#c2410c" text-anchor="middle">Curvadora 1</text>
+
+      <rect x="492" y="104" width="85" height="48" rx="2" fill="#ffedd5" stroke="#ea580c" stroke-width="1.3"/>
+      <text x="534" y="132" font-size="7.5" font-weight="700" fill="#c2410c" text-anchor="middle">Curvadora 2</text>
+    
+
+      <rect x="715" y="48" width="105" height="40" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="767" y="66" font-size="7" font-weight="600" fill="#475569" text-anchor="middle">Almacén Chapa</text>
+      <text x="767" y="79" font-size="6.2" fill="#64748b" text-anchor="middle">Costurada</text>
+
+      <rect x="832" y="48" width="65" height="75" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="864" y="88" font-size="6.8" font-weight="600" fill="#475569" text-anchor="middle">Racks Chapas</text>
+    
+
+      <rect x="715" y="96" width="60" height="30" rx="2" fill="#ffedd5" stroke="#ea580c" stroke-width="1.2"/>
+      <circle cx="730" cy="111" r="7" fill="#ea580c"/>
+      <text x="730" y="113.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+      <text x="754" y="113.5" font-size="6.5" font-weight="700" fill="#c2410c">Encol.</text>
+    
+
+      <rect x="705" y="136" width="100" height="32" rx="2" fill="#ffedd5" stroke="#ea580c" stroke-width="1.2"/>
+      <circle cx="720" cy="152" r="7" fill="#ea580c"/>
+      <text x="720" y="154.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+      <text x="753" y="155" font-size="6" font-weight="700" fill="#c2410c">Aplicador Adhesivo</text>
+    
+
+      <rect x="808" y="134" width="90" height="65" rx="3" fill="#ffedd5" stroke="#ea580c" stroke-width="1.8"/>
+      <text x="853" y="161" font-size="8.5" font-weight="700" fill="#c2410c" text-anchor="middle">PRENSA HF</text>
+      <text x="853" y="176" font-size="6.8" font-weight="600" fill="#ea580c" text-anchor="middle">(Curvado 3 min)</text>
+      <text x="853" y="188" font-size="5.8" fill="#c2410c" text-anchor="middle">Dieléctrico alta frecuencia</text>
+    
+
+      <rect x="492" y="166" width="165" height="155" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+      <text x="574" y="231" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">ALMACÉN</text>
+      <text x="574" y="248" font-size="8.5" font-weight="700" fill="#475569" text-anchor="middle">MULTILAMINADOS</text>
+      <text x="574" y="266" font-size="7" fill="#64748b" text-anchor="middle">Placas Guatambú / Guayica</text>
+      <text x="574" y="280" font-size="6" fill="#94a3b8" text-anchor="middle">Pallets 1,30 × 2,60 m</text>
+    
+
+      <rect x="835" y="211" width="62" height="75" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="854" cy="236" r="7" fill="#0284c7"/>
+      <text x="854" y="238.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+      <text x="866" y="261" font-size="6.5" font-weight="600" fill="#0369a1" text-anchor="middle">Guillotina Madera</text>
+    
+
+      <rect x="715" y="226" width="112" height="60" rx="2" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2"/>
+      <circle cx="732" cy="251" r="7" fill="#0284c7"/>
+      <text x="732" y="253.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">11</text>
+      <text x="768" y="255" font-size="6.5" font-weight="600" fill="#0369a1">Costura de Chapa</text>
+    
+
+      <rect x="835" y="301" width="62" height="85" rx="2" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+      <circle cx="854" cy="326" r="7" fill="#ca8a04"/>
+      <text x="854" y="328.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">12</text>
+      <text x="866" y="348" font-size="6.5" font-weight="700" fill="#854d0e" text-anchor="middle">Lijado Fino</text>
+      <text x="866" y="361" font-size="5.8" fill="#a16207" text-anchor="middle">(Diego · 0,7 mm)</text>
+    
+
+      <rect x="492" y="336" width="120" height="90" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.6"/>
+      <text x="552" y="374" font-size="8.2" font-weight="700" fill="#5b21b6" text-anchor="middle">CABINA DE PINTURA</text>
+      <text x="552" y="390" font-size="6.5" fill="#7c3aed" text-anchor="middle">(Laca Semimate Soplete)</text>
+      <text x="552" y="404" font-size="5.8" fill="#5b21b6" text-anchor="middle">Cortina y extracción</text>
+
+      <rect x="618" y="336" width="50" height="55" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.4"/>
+      <circle cx="643" cy="356" r="7" fill="#16a34a"/>
+      <text x="643" y="358.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">13</text>
+      <text x="643" y="378" font-size="6.2" font-weight="700" fill="#15803d" text-anchor="middle">Montaje</text>
+    
+
+      <rect x="715" y="401" width="105" height="55" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="767" y="426" font-size="7.5" font-weight="600" fill="#475569" text-anchor="middle">ALMACENAMIENTO</text>
+      <text x="767" y="440" font-size="6.2" fill="#64748b" text-anchor="middle">Pulido e Insumos</text>
+
+      <rect x="832" y="401" width="65" height="35" rx="2" fill="#3b82f6"/>
+      <text x="864" y="422" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">ESCALERA</text>
+    
+
+      <rect x="492" y="441" width="176" height="110" rx="3" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.8"/>
+      <text x="580" y="484" font-size="8.8" font-weight="700" fill="#0369a1" text-anchor="middle">ROUTER CNC (MECANIZADO)</text>
+      <text x="580" y="502" font-size="7.2" fill="#0284c7" text-anchor="middle">Mecanizado Asientos y Piezas Planas</text>
+      <text x="580" y="516" font-size="6.2" fill="#0369a1" text-anchor="middle">Corte de placas curvas y calibración</text>
+    
+
+      <rect x="715" y="471" width="182" height="52" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="806" y="498" font-size="7.5" font-weight="600" fill="#475569" text-anchor="middle">ALMACENAMIENTO EN PROCESO</text>
+      <text x="806" y="511" font-size="6.2" fill="#64748b" text-anchor="middle">Buffer previo a ensamble final</text>
+
+      <rect x="695" y="541" width="202" height="175" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2"/>
+      <text x="796" y="616" font-size="9" font-weight="700" fill="#475569" text-anchor="middle">ALMACÉN GENERAL</text>
+      <text x="796" y="634" font-size="7.5" fill="#64748b" text-anchor="middle">Muebles Embalados y Expedición</text>
+      <text x="796" y="650" font-size="6.5" fill="#94a3b8" text-anchor="middle">Control de calidad y embalaje final</text>
+    
+
+      <rect x="495" y="730" width="125" height="18" rx="2" fill="#22c55e"/>
+      <text x="557" y="743" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">PORTÓN 2A ▼</text>
+
+      <rect x="695" y="730" width="145" height="18" rx="2" fill="#22c55e"/>
+      <text x="767" y="743" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">PORTÓN EXPEDICIÓN 2B ▼</text>
+    
+
+      <text x="922" y="392.0" font-size="10" font-weight="800" fill="#94a3b8" text-anchor="middle" transform="rotate(90 922 392.0)">360 (36 m)</text>
+      <text x="695.0" y="763" font-size="8.5" font-weight="700" fill="#94a3b8" text-anchor="middle">90 (9 m)</text>
+    
+
+      <g>
+        <rect x="30" y="780" width="430" height="22" rx="3" fill="#1e293b"/>
+        <text x="245.0" y="795" fill="#ffffff" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">PLANTA ALTA · TAPICERÍA Y CORTE LÁSER (16×9 m)</text>
+      </g>
+    
+
+      <rect x="30" y="806" width="430" height="372" rx="4" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    
+
+      <path d="M 225 814 L 225 1133 L 355 1133 L 355 1166" fill="none" stroke="#e2e8f0" stroke-width="18" stroke-linecap="round"/>
+      <path d="M 225 814 L 225 1133 L 355 1133 L 355 1166" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+    
+
+      <rect x="145" y="820" width="165" height="48" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="227" y="842" font-size="8" font-weight="600" fill="#475569" text-anchor="middle">ALMACÉN DE TELAS</text>
+      <text x="227" y="857" font-size="6.5" fill="#64748b" text-anchor="middle">Bobinas y Rollos Textiles</text>
+    
+
+      <rect x="385" y="820" width="65" height="190" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="417" y="916" font-size="7.5" font-weight="600" fill="#475569" text-anchor="middle" transform="rotate(90 417 916)">RACKS DE ESPUMAS</text>
+    
+
+      <rect x="255" y="886" width="120" height="65" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+      <text x="315" y="914" font-size="8.2" font-weight="700" fill="#15803d" text-anchor="middle">CORTE LÁSER TEXTIL</text>
+      <text x="315" y="931" font-size="6.5" fill="#16a34a" text-anchor="middle">Mesa CNC Automatizada</text>
+
+      <rect x="255" y="964" width="120" height="38" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="275" cy="983" r="7" fill="#64748b"/>
+      <text x="275" y="985.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">15</text>
+      <text x="322" y="986" font-size="6.8" font-weight="600" fill="#475569">Mesa Despiece</text>
+    
+
+      <rect x="42" y="886" width="168" height="70" rx="2" fill="#dcfce7" stroke="#16a34a" stroke-width="1.4"/>
+      <circle cx="62" cy="921" r="7.5" fill="#16a34a"/>
+      <text x="62" y="923.5" font-size="6.8" font-weight="700" fill="#ffffff" text-anchor="middle">14</text>
+      <text x="135" y="914" font-size="7.5" font-weight="700" fill="#15803d" text-anchor="middle">MONTAJE ESPUMA Y TELA</text>
+      <text x="135" y="930" font-size="6.2" fill="#16a34a" text-anchor="middle">Engrapado y confección de fundas</text>
+    
+
+      <rect x="42" y="974" width="168" height="110" rx="2" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="126" y="1021" font-size="8" font-weight="600" fill="#475569" text-anchor="middle">ALMACÉN PARTES TAPIZADAS</text>
+      <text x="126" y="1038" font-size="6.8" fill="#64748b" text-anchor="middle">Asientos y respaldos listos</text>
+      <text x="126" y="1052" font-size="6" fill="#94a3b8" text-anchor="middle">Buffer para ensamble final</text>
+    
+
+      <rect x="195" y="1146" width="155" height="26" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="3,3"/>
+      <text x="272" y="1163" font-size="7.5" font-weight="700" fill="#b45309" text-anchor="middle">APERTURA PARA CLARK / ELEVADOR</text>
+
+      <rect x="360" y="1146" width="90" height="26" rx="2" fill="#3b82f6"/>
+      <text x="405" y="1163" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">ESCALERA</text>
+    
+
+      <text x="18" y="992.0" font-size="10" font-weight="800" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 18 992.0)">160 (16 m)</text>
+      <text x="245.0" y="1193" font-size="8.5" font-weight="700" fill="#94a3b8" text-anchor="middle">90 (9 m)</text>
+    
+
+      <g>
+        <rect x="480" y="780" width="430" height="22" rx="3" fill="#1e293b"/>
+        <text x="695.0" y="795" fill="#ffffff" font-size="9.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">REFERENCIAS DE PLANTA Y PUESTOS</text>
+      </g>
+    
+
+      <rect x="480" y="806" width="430" height="372" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+    
+
+      <text x="494" y="826" font-size="8" font-weight="700" fill="#0f172a">1. CÓDIGO DE SECTORES FUNCIONALES:</text>
+      
+      <g transform="translate(494, 836)">
+        <!-- Fila 1: Prensas HF y Mecanizado -->
+        <rect x="0" y="0" width="12" height="12" rx="2" fill="#ffedd5" stroke="#ea580c"/>
+        <text x="18" y="10" font-size="7" fill="#334155">Curvado y Prensas Alta Frecuencia (HF)</text>
+
+        <rect x="210" y="0" width="12" height="12" rx="2" fill="#e0f2fe" stroke="#0284c7"/>
+        <text x="228" y="10" font-size="7" fill="#334155">Mecanizado CNC / Carpintería</text>
+
+        <!-- Fila 2: Cabina Pintura y Corte Láser -->
+        <rect x="0" y="18" width="12" height="12" rx="2" fill="#ede9fe" stroke="#7c3aed"/>
+        <text x="18" y="28" font-size="7" fill="#334155">Cabina de Laqueado y Lijado Fino</text>
+
+        <rect x="210" y="18" width="12" height="12" rx="2" fill="#dcfce7" stroke="#16a34a"/>
+        <text x="228" y="28" font-size="7" fill="#334155">Corte Láser Textil y Tapicería</text>
+
+        <!-- Fila 3: Almacenamiento -->
+        <rect x="0" y="36" width="12" height="12" rx="2" fill="#f1f5f9" stroke="#94a3b8"/>
+        <text x="18" y="46" font-size="7" fill="#334155">Almacenamiento e Inventarios en Proceso</text>
+      </g>
+
+      <!-- Línea divisoria sobria -->
+      <line x1="494" y1="894" x2="896" y2="894" stroke="#e2e8f0" stroke-width="1"/>
+    
+
+      <text x="494" y="910" font-size="8" font-weight="700" fill="#0f172a">2. PUESTOS Y MÁQUINAS REFERENCIADAS EN PLANO:</text>
+    
+
+          <circle cx="506" cy="928" r="6.5" fill="#0284c7"/>
+          <text x="506" y="930.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+          <text x="518" y="930.8" font-size="7" font-weight="600" fill="#334155">Rectificadora de cantos</text>
+        
+
+          <circle cx="506" cy="946" r="6.5" fill="#0284c7"/>
+          <text x="506" y="948.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+          <text x="518" y="948.8" font-size="7" font-weight="600" fill="#334155">Cepilladora mecánica</text>
+        
+
+          <circle cx="506" cy="964" r="6.5" fill="#0284c7"/>
+          <text x="506" y="966.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+          <text x="518" y="966.8" font-size="7" font-weight="600" fill="#334155">Espigadora de estructura</text>
+        
+
+          <circle cx="506" cy="982" r="6.5" fill="#0284c7"/>
+          <text x="506" y="984.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+          <text x="518" y="984.8" font-size="7" font-weight="600" fill="#334155">Fresadora tupí vertical</text>
+        
+
+          <circle cx="506" cy="1000" r="6.5" fill="#0284c7"/>
+          <text x="506" y="1002.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+          <text x="518" y="1002.8" font-size="7" font-weight="600" fill="#334155">Mortajadora de cadena</text>
+        
+
+          <circle cx="506" cy="1018" r="6.5" fill="#0284c7"/>
+          <text x="506" y="1020.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+          <text x="518" y="1020.8" font-size="7" font-weight="600" fill="#334155">Sierra sin fin 1 (desbaste)</text>
+        
+
+          <circle cx="506" cy="1036" r="6.5" fill="#0284c7"/>
+          <text x="506" y="1038.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+          <text x="518" y="1038.8" font-size="7" font-weight="600" fill="#334155">Sierra sin fin 2 (corte fino)</text>
+        
+
+          <circle cx="506" cy="1054" r="6.5" fill="#ea580c"/>
+          <text x="506" y="1056.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+          <text x="518" y="1056.8" font-size="7" font-weight="600" fill="#334155">Encoladora de rodillos</text>
+        
+
+          <circle cx="705" cy="928" r="6.5" fill="#ea580c"/>
+          <text x="705" y="930.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+          <text x="717" y="930.8" font-size="7" font-weight="600" fill="#334155">Aplicador de adhesivo</text>
+        
+
+          <circle cx="705" cy="946" r="6.5" fill="#0284c7"/>
+          <text x="705" y="948.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+          <text x="717" y="948.8" font-size="7" font-weight="600" fill="#334155">Guillotina de chapas</text>
+        
+
+          <circle cx="705" cy="964" r="6.5" fill="#0284c7"/>
+          <text x="705" y="966.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">11</text>
+          <text x="717" y="966.8" font-size="7" font-weight="600" fill="#334155">Costura de chapa noble</text>
+        
+
+          <circle cx="705" cy="982" r="6.5" fill="#ca8a04"/>
+          <text x="705" y="984.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">12</text>
+          <text x="717" y="984.8" font-size="7" font-weight="600" fill="#334155">Lijado fino (Diego · 0,7mm)</text>
+        
+
+          <circle cx="705" cy="1000" r="6.5" fill="#16a34a"/>
+          <text x="705" y="1002.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">13</text>
+          <text x="717" y="1002.8" font-size="7" font-weight="600" fill="#334155">Montaje y ensamble final</text>
+        
+
+          <circle cx="705" cy="1018" r="6.5" fill="#16a34a"/>
+          <text x="705" y="1020.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">14</text>
+          <text x="717" y="1020.8" font-size="7" font-weight="600" fill="#334155">Montaje de espuma y tela</text>
+        
+
+          <circle cx="705" cy="1036" r="6.5" fill="#64748b"/>
+          <text x="705" y="1038.4" font-size="6.2" font-weight="700" fill="#ffffff" text-anchor="middle">15</text>
+          <text x="717" y="1038.8" font-size="7" font-weight="600" fill="#334155">Mesa de despiece textil</text>
+        
+
+      <rect x="494" y="1080" width="402" height="38" rx="3" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="504" y="1094" font-size="7" font-weight="700" fill="#1e293b">FICHA TÉCNICA DE PLANTA (GRAN SASSO S.R.L.):</text>
+      <text x="504" y="1105" font-size="6.2" fill="#475569">· Bouchard 3870, Villa Lynch · Sup. PB: 648 m² (2 naves 36×9m) · Entrepiso: 144 m² (16×9m)</text>
+      <text x="504" y="1114" font-size="6.2" font-weight="600" fill="#0284c7">· Superficie total: ~792 m² cubiertos · Relevamiento y planimetría a escala técnica</text>
+    
+</svg>

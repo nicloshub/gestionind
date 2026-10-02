@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP2 - Diagnóstico Técnico-Social: Gran Sasso S.R.L. | Gestión Industrial FADU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Botón flotante para previsualizar/guardar en PDF -->
+  <button class="print-fab" onclick="window.print()" title="Exportar a PDF">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9V2h12v7"></path>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+      <rect x="6" y="14" width="12" height="8"></rect>
+    </svg>
+    Exportar a PDF
+  </button>
+
+  <div class="sheet-container">
+
+    <!-- ====================================================================
+         PÁGINA 1: PORTADA, DATOS INSTITUCIONALES & FICHA INICIAL
+         ==================================================================== -->
+    <section class="page" id="page-1">
+      <div class="page-content">
+        <!-- Portada / Header Hero con Imagen y Blur -->
+        <div class="cover-hero">
+          <img src="assets/header_presentacion.jpg" alt="Gran Sasso S.R.L." class="hero-bg">
+          <div class="cover-header">
+            <div class="institution">Trabajo Práctico N.º 2 · Bitácora de Empresa</div>
+            <h1>Diagnóstico Técnico-Social de Gran Sasso S.R.L.</h1>
+            <div class="subtitle">Análisis integral de capacidades productivas, entramado territorial y tensiones de desarrollo</div>
+          </div>
+        </div>
+
+        <!-- Metadatos de Grupo -->
+        <div class="metadata-grid">
+          <div class="metadata-item">
+            <span class="label">Grupo</span>
+            <span class="value">Grupo 5</span>
+          </div>
+          <div class="metadata-item">
+            <span class="label">Integrantes</span>
+            <span class="value">Gustavo Saucedo · Nicolás Cloos · Agustin Coria</span>
+          </div>
+        </div>
+
+        <!-- Ficha Inicial de la Empresa -->
+        <div class="section-title">
+          <span>1. Ficha Inicial de la Empresa</span>
+        </div>
+
+        <div class="ficha-grid">
+          <div class="ficha-card">
+            <span class="label">Nombre de la empresa</span>
+            <div class="content"><strong>Gran Sasso S.R.L.</strong> (Mobiliario de Diseño Contemporáneo)</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">Origen y Trayectoria</span>
+            <div class="content">Taller maderero familiar de 2.ª generación; reconversión de carpintería tradicional a fábrica seriada.</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">Localización principal</span>
+            <div class="content">Bouchard 3870, San Andrés, Partido de Gral. San Martín, Prov. de Buenos Aires.</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">Sector o rubro</span>
+            <div class="content">Industria de la Madera y el Mueble / Mobiliario residencial y equipamiento interior.</div>
+          </div>
+          <div class="ficha-card full-width">
+            <span class="label">Producto, servicio o tecnología principal</span>
+            <div class="content">Diseño y fabricación seriada de sillas, banquetas y mesas de comedor. Prensado de madera multilaminada en alta frecuencia (láminas desde Misiones), robot de mecanizado 3D de 6 ejes, corte láser textil, laqueado y tapizado.</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">Tipo de empresa y dotación</span>
+            <div class="content">PyME industrial familiar; 18 personas (12 operarios de planta, 6 en administración/ventas/diseño).</div>
+          </div>
+          <div class="ficha-card">
+            <span class="label">Escala de actuación</span>
+            <div class="content">Regional y Nacional (venta directa en AMBA y distribución a mueblerías del interior del país).</div>
+          </div>
+        </div>
+
+        <!-- Recorte, Producto Testigo y Justificación -->
+        <div class="section-title">
+          <span>2. Producto y proceso analizado</span>
+        </div>
+
+        <!-- Tarjeta del Producto Testigo (Silla Ginger) -->
+        <div class="producto-analizado-card">
+          <div class="producto-img-container">
+            <img src="assets/ginger.webp" alt="Silla Ginger - Gran Sasso SRL">
+          </div>
+          <div class="producto-detalles">
+            <div class="prod-title">
+              <span>Silla Ginger</span>
+              <a href="https://gransassosrl.com/productos/ginger/" target="_blank" class="prod-link">gransassosrl.com/productos/ginger/ ↗</a>
+            </div>
+            <p style="margin-bottom: 5px;">
+              A los fines del presente diagnóstico, el análisis se centra principalmente en el <strong>flujo productivo de este producto: la Silla Ginger</strong>, modelo de comedor contemporáneo de presencia envolvente, con respaldo alto de curvatura anatómica pronunciada y asiento ergonómico tapizado montado sobre una estructura de madera maciza lustrada. Este producto sintetiza y tracciona la totalidad de los procesos clave de planta: <strong>prensado de multilaminado curvado en alta frecuencia</strong> para el casco ergonómico, <strong>mecanizado robótico de 6 ejes</strong> para el fresado tridimensional del bastidor y patas, <strong>corte láser textil</strong>, tapizado con engrapado neumático y acabado en laca poliuretánica semimate.
+            </p>
+            <p>
+              <strong>Relevancia para el Diseño Industrial y la Gestión Productiva:</strong> Gran Sasso constituye un caso testigo paradigmático de la manufactura nacional: una PyME familiar que expande el oficio artesanal maderero hacia la serie tecnificada. A través del flujo productivo de la <strong>Silla Ginger</strong> se visibilizan las tensiones reales de la gestión fabril: la articulación de robótica de 6 ejes con ensambles y costuras en talleres territoriales vecinos (bases de hierro y pintura a 50 y 150 metros), la formación práctica in situ frente a la escasez de oficios formales, y el impacto macroeconómico dual que combina la amenaza de muebles terminados importados con la incorporación de bienes de capital.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP2 - Grupo 5 - Gustavo Saucedo, Nicolás Cloos, Agustin Coria</span>
+        <span class="page-number">Página 1 de 5</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 2: EJES 1, 2 Y 3 (TRAYECTORIA, DEMANDA Y TERRITORIO)
+         ==================================================================== -->
+    <section class="page" id="page-2">
+      <div class="page-content">
+        <div class="section-title">
+          <span>3. Ejes de la bitacora</span>
+        </div>
+
+        <div class="ejes-container ejes-page-2">
+
+          <!-- EJE 1: HISTORICIDAD -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 1</span>
+                <h2 class="eje-title">Historicidad</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>El origen de la empresa radica en el oficio artesanal del padre del titular, carpintero de banco tradicional. La segunda generación (los dos hermanos) capitalizó esa herencia técnica pero introdujo una ruptura de escala y producto: abandonaron la carpintería general a medida para especializarse exclusivamente en la fabricación seriada de sillas y mesas de diseño. Esta dependencia de trayectoria (<em>path dependency</em>) explica su solvencia constructiva en encastres de madera, a la vez que motivó la tecnificación posterior con prensas y robots.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Entrevista directa a Mauro (socio y encargado de planta); recorrido guiado por instalaciones fabriles; antecedentes societarios de constitución PyME.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Saber técnico tácito transmitido intergeneracionalmente, que asegura calidad formal y solidez constructiva. <strong>Tensión:</strong> Supervivencia de ciertas rutinas de taller que conviven con la exigencia de estandarización industrial.</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- EJE 2: MERCADO Y DEMANDA -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 2</span>
+                <h2 class="eje-title">Mercado y Demanda</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>La demanda se compone primordialmente de <strong>clientes particulares (consumidor final de sectores medios/medios-altos)</strong>, complementada con venta mayorista de partes curvadas a otras fábricas de sillas que carecen de la tecnología de prensado. El canal comercial central es digital: captación por redes sociales y pauta en Meta (Instagram/Facebook) articulada con showroom de fábrica. Compite por diferenciación formal (diseño contemporáneo con terminaciones de calidad) a precio directo de manufactura.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (demanda en Meta, clientes particulares y provisión B2B de piezas curvadas); catálogo web (gransassosrl.com); informes de FAIMA.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Desintermediación y venta B2B de componentes tecnológicos de alto valor a competidores. <strong>Tensión:</strong> Fuerte vulnerabilidad ante la contracción del salario real y dependencia continua del gasto publicitario en Meta.</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- EJE 3: TERRITORIO Y ÁMBITOS -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 3</span>
+                <h2 class="eje-title">Territorio y Ámbitos</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>Emplazada en San Martín ("Capital Nacional de la Industria"), Gran Sasso explota una <strong>red territorial de cercanía extrema</strong>: el taller de herrería que produce las bases metálicas (a cargo del hermano del titular) opera a <em>media cuadra</em>, la pintura electrostática a <em>cuadra y media</em> y la costura de tapicería se terceriza con un taller vecino. Las materias primas ingresan desde centros distantes (láminas de Misiones en pallets de 1,30x2,60m). Hacia adentro, el layout de planta es deficiente, generando traslados redundantes ("ir y venir") que ralentizan el ciclo.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (layout productivo, tiempos muertos, red de proveedores locales en San Martín y aprovisionamiento desde Misiones).</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Clúster manufacturero de San Martín que reduce fletes de semielaborados a escala de cuadra. <strong>Tensión:</strong> Layout interno no lineal que genera cuellos de botella espaciales, demorado por falta de tiempo de gestión.</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- EJE 4: POLÍTICAS PÚBLICAS -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 4</span>
+                <h2 class="eje-title">Políticas Públicas</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>Impacto macroeconómico contradictorio: la apertura y desregulación comercial genera una fuerte amenaza por el ingreso irrestricto de <strong>muebles terminados importados</strong> a precios por debajo del costo local. Simultáneamente, la flexibilización facilitó la importación de bienes de capital para actualizar la planta: se incorporaron en el último año <strong>10 máquinas industriales en dos contenedores</strong>. No obstante, no existen créditos productivos blandos de fomento ni amortiguadores ante las tarifas energéticas de maquinarias de alta potencia.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (importación de 10 máquinas industriales y competencia con muebles terminados); informes del régimen arancelario de FAIMA y CEMA.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Capacidad de equipamiento con tecnología internacional. <strong>Tensión:</strong> Competencia asimétrica con el mueble importado sin instrumentos de salvaguarda arancelaria ni políticas activas de estímulo al diseño.</td>
+              </tr>
+            </table>
+          </article>
+
+        </div>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP2 - Grupo 5 - Gustavo Saucedo, Nicolás Cloos, Agustin Coria</span>
+        <span class="page-number">Página 2 de 5</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 3: EJES 5, 6 Y 7 (RRHH, TÉCNICA Y FINANZAS)
+         ==================================================================== -->
+    <section class="page" id="page-3">
+      <div class="page-content">
+        <div class="ejes-container ejes-page-3">
+
+          <!-- EJE 5: ACTORES Y RECURSOS HUMANOS -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 5</span>
+                <h2 class="eje-title">Actores, Recursos Humanos y Educación</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>Dotación de 18 trabajadores (12 en planta). Formación predominantemente interna: el 70% aprende en fábrica al pie de máquina con operarios antiguos sin manuales formales (confirmado por el testimonio de Diego en lijado: <em>"fui aprendiendo acá, voy rotando donde me necesitan"</em>). Rige rotación continua entre puestos, salvo dos especializaciones fijas: <strong>laqueador y tapicero</strong>. La gestión se basa en planillas físicas impresas diarias/semanales. Se detectaron dos puntos críticos: <strong>la línea de mesas depende de un solo operario de punta a punta</strong>, y el polvo de madera en suspensión sigue siendo una incomodidad ambiental pese a la aspiración colocada hace 4 meses.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (rotación de puestos, planillas de producción, línea de mesas y dotación total); Diego, operario (capacitación práctica y tareas de lijado).</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Polivalencia laboral y apertura a sugerencias operativas. <strong>Tensión:</strong> Dependencia extrema de operarios clave no duplicados (mesas) y aspiración de polvo aún insuficiente en lijado.</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- EJE 6: TÉCNICA Y CONOCIMIENTO TECNOLÓGICO -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 6</span>
+                <h2 class="eje-title">Técnica y Conocimiento Tecnológico</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>El núcleo técnico diferencial es el <strong>curvado de madera multilaminada en prensas de alta frecuencia</strong> (calentamiento dieléctrico que cocina la cola en 3 min + 1,5 min de enfriamiento a 70°C, alternando veta y contraveta). Chapas exteriores nobles de 0,7mm unidas con hilo termofusible. Coexisten tecnologías de punta (<strong>brazo robótico de 6 ejes con 4 motores</strong> para corte/fresado 3D simultáneo y corte láser de telas) con procesos artesanales (corte de cuero con bisturí sobre molde para evitar quemaduras láser). Para superar el cuello de botella del agujereado manual se incorpora automatización programada, y evalúan moldes impresos en 3D.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (curvado en alta frecuencia, robot 6 ejes, láser y moldes 3D); Diego, operario (sensibilidad en lijado de chapa 0,7 mm).</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Vanguardia en curvado HF y robótica 3D multieje. <strong>Tensión:</strong> Riesgo de desgaste excesivo en lijado fino de chapas de 0,7mm y cuellos de botella en la electrónica del CNC de 5 ejes en reparación.</td>
+              </tr>
+            </table>
+          </article>
+
+          <!-- EJE 7: RECURSOS ECONÓMICOS Y FINANCIAMIENTO -->
+          <article class="eje-block">
+            <div class="eje-header">
+              <div class="title-group">
+                <span class="eje-num">EJE 7</span>
+                <h2 class="eje-title">Recursos Económicos y Financiamiento</h2>
+              </div>
+            </div>
+            <table class="eje-table">
+              <tr>
+                <td class="row-header">Hallazgos principales</td>
+                <td>Estrategia de <strong>autofinanciamiento y reinversión de utilidades</strong> operativas sin recurrir a créditos bancarios comerciales, inviables por las tasas de interés vigentes. La adquisición de las 10 máquinas importadas y la renovación de componentes electrónicos del CNC demandaron un esfuerzo masivo de absorción de liquidez propia. Esto tensiona el capital de trabajo necesario para la compra anticipada de pallets de láminas en Misiones y chapas de madera, obligando a priorizar el flujo de caja diario frente a inversiones edilicias como el nuevo layout.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fuentes consultadas</td>
+                <td>Mauro, socio y encargado de planta (inversión propia en maquinaria, reposición electrónica CNC y compra de láminas en Misiones); datos sectoriales PyME de CEMA.</td>
+              </tr>
+              <tr>
+                <td class="row-header">Fortalezas o tensiones</td>
+                <td><strong>Fortaleza:</strong> Nula deuda financiera indexada y solidez de activos fijos en maquinaria. <strong>Tensión:</strong> Alta vulnerabilidad de caja si se retrasa la rotación de stock de producto terminado ante una recesión en el consumo.</td>
+              </tr>
+            </table>
+          </article>
+
+        </div>
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP2 - Grupo 5 - Gustavo Saucedo, Nicolás Cloos, Agustin Coria</span>
+        <span class="page-number">Página 3 de 5</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 4: MATRIZ DE DIAGNÓSTICO FINAL CONSOLIDADA
+         ==================================================================== -->
+    <section class="page" id="page-4">
+      <div class="page-content">
+        <div class="section-title">
+          <span>4. Matriz de Diagnóstico Técnico-Social</span>
+        </div>
+
+        <p style="font-size: 8.2pt; line-height: 1.35; color: var(--color-text-muted); margin-bottom: 7px;">
+          Consolidación de evidencias de campo, fortalezas y tensiones de Gran Sasso S.R.L. según los 7 ejes de la Bitácora. Los niveles de impacto reflejan el grado de criticidad respecto a la sustentabilidad productiva de la fábrica.
+        </p>
+
+        <table class="matriz-table">
+          <thead>
+            <tr>
+              <th class="col-eje">Eje</th>
+              <th class="col-hallazgo">Hallazgo Principal</th>
+              <th class="col-evidencia">Evidencia / Fuente</th>
+              <th class="col-fortaleza">Fortaleza</th>
+              <th class="col-tension">Debilidad / Tensión</th>
+              <th class="col-pregunta">Pregunta Abierta</th>
+              <th class="col-impacto">Impacto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                    <path d="M3 3v5h5"/>
+                    <path d="M12 7v5l4 2"/>
+                  </svg>
+                  <span class="eje-matriz-label">1. Historicidad</span>
+                </div>
+              </td>
+              <td>Transición de carpintería de banco artesanal del padre hacia fábrica seriada de sillas y mesas de los hermanos.</td>
+              <td>Entrevista a Mauro (socio y encargado) y antecedentes de taller familiar.</td>
+              <td>Oficio maderero acumulado y profundo dominio de uniones y materiales.</td>
+              <td>Inercia de taller en métodos organizativos y baja formalización documental.</td>
+              <td>¿Cómo sistematizar el saber tácito de cara a un mayor volumen?</td>
+              <td class="col-impacto"><span class="badge-impacto bajo">Bajo</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <path d="M3 6h18"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                  </svg>
+                  <span class="eje-matriz-label">2. Mercado y Demanda</span>
+                </div>
+              </td>
+              <td>Venta directa a consumidor final vía Meta; venta B2B de piezas curvadas complejas a mueblerías colegas.</td>
+              <td>Mauro, socio y encargado de planta (canales Meta y venta B2B); catálogo y tienda web.</td>
+              <td>Diferenciación estética accesible y provisión técnica a terceros.</td>
+              <td>Sensibilidad crítica ante caídas del salario real y costo publicitario.</td>
+              <td>¿Puede consolidar un canal corporativo / institucional estable?</td>
+              <td class="col-impacto"><span class="badge-impacto alto">Alto</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span class="eje-matriz-label">3. Territorio y Ámbitos</span>
+                </div>
+              </td>
+              <td>Sinergia territorial en San Martín (bases de hierro del hermano a 50m, pintura a 150m), pero layout deficiente.</td>
+              <td>Mauro, socio y encargado de planta (red barrial en San Martín y layout interno).</td>
+              <td>Minimización de fletes y tercerización ágil de semielaborados.</td>
+              <td>Pérdida de tiempo productivo por flujo interno no lineal ("ir y venir").</td>
+              <td>¿Cómo reconfigurar el layout fabril sin frenar las entregas diarias?</td>
+              <td class="col-impacto"><span class="badge-impacto medio">Medio</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="22" x2="21" y2="22"/>
+                    <line x1="6" y1="18" x2="6" y2="11"/>
+                    <line x1="10" y1="18" x2="10" y2="11"/>
+                    <line x1="14" y1="18" x2="14" y2="11"/>
+                    <line x1="18" y1="18" x2="18" y2="11"/>
+                    <polygon points="12 2 20 7 4 7"/>
+                  </svg>
+                  <span class="eje-matriz-label">4. Políticas Públicas</span>
+                </div>
+              </td>
+              <td>Apertura comercial dual: ingreso desleal de muebles terminados vs compra de 10 máquinas importadas.</td>
+              <td>Mauro, socio y encargado de planta (bienes de capital e ingreso de muebles importados).</td>
+              <td>Capacidad de equipamiento de planta con tecnología internacional moderna.</td>
+              <td>Competencia asimétrica sin aranceles de protección frente al mueble asiático.</td>
+              <td>¿Qué salvaguardas arancelarias requiere la manufactura nacional?</td>
+              <td class="col-impacto"><span class="badge-impacto alto">Alto</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                  <span class="eje-matriz-label">5. Actores y RRHH</span>
+                </div>
+              </td>
+              <td>70% se capacita en planta; rotación de puestos pero monopolio absoluto en la línea de mesas.</td>
+              <td>Mauro (encargado de planta) y Diego (operario de lijado); relevamiento de dotación.</td>
+              <td>Compromiso y polivalencia en maquinado y ensamble de cajas.</td>
+              <td>Vulnerabilidad crítica: la línea de mesas depende de un solo operario.</td>
+              <td>¿Cómo formalizar instructivos para duplicar el puesto de mesas?</td>
+              <td class="col-impacto"><span class="badge-impacto alto">Alto</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="16" height="16" x="4" y="4" rx="2"/>
+                    <rect width="6" height="6" x="9" y="9" rx="1"/>
+                    <path d="M15 2v2"/>
+                    <path d="M15 20v2"/>
+                    <path d="M2 15h2"/>
+                    <path d="M2 9h2"/>
+                    <path d="M20 15h2"/>
+                    <path d="M20 9h2"/>
+                    <path d="M9 2v2"/>
+                    <path d="M9 20v2"/>
+                  </svg>
+                  <span class="eje-matriz-label">6. Técnica y Conocimiento</span>
+                </div>
+              </td>
+              <td>Prensado HF y robot 6 ejes con 4 motores; corte láser en tela vs bisturí manual en cuero; moldes 3D proyectados.</td>
+              <td>Mauro (recorrido técnico, curvado HF y robótica) y Diego (sensibilidad en lijado).</td>
+              <td>Dominio de multilaminado curvado y automatización robótica multieje.</td>
+              <td>Dispersión en agujereado manual previo y desgaste de chapa en lijado.</td>
+              <td>¿Hasta qué punto la impresión 3D acelerará la nueva matricería?</td>
+              <td class="col-impacto"><span class="badge-impacto medio">Medio</span></td>
+            </tr>
+            <tr>
+              <td class="col-eje">
+                <div class="eje-matriz-cell">
+                  <svg class="eje-matriz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                    <path d="M12 18V6"/>
+                  </svg>
+                  <span class="eje-matriz-label">7. Recursos Económicos</span>
+                </div>
+              </td>
+              <td>Crecimiento por autofinanciamiento; absorción masiva de caja por máquinas importadas y stock de madera.</td>
+              <td>Mauro, socio y encargado (inversión de capital propio y compra de insumos); datos CEMA.</td>
+              <td>Independencia frente al sistema financiero y nula deuda a tasas usurarias.</td>
+              <td>Rigidez de liquidez para remodelaciones edilicias y layout de planta.</td>
+              <td>¿Cómo blindar el capital de trabajo ante una eventual recesión?</td>
+              <td class="col-impacto"><span class="badge-impacto medio">Medio</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="lectura-integral-box">
+          <div class="title">
+            Análisis de Matriz
+          </div>
+          <p>
+            El análisis cruzado revela que la fortaleza estructural de Gran Sasso reside en su <strong>dimensión técnica (Eje 6: curvado en alta frecuencia y celda robótica de 6 ejes)</strong> y su <strong>articulación territorial en San Martín (Eje 3: subcontratación inmediata de herrería y pintura)</strong>. Sus tensiones más agudas se manifiestan en la <strong>política comercial externa (Eje 4: libre importación de muebles terminados)</strong> y en la <strong>organización interna del trabajo (Eje 5: puesto de mesas monopersonal y layout trabado)</strong>, desafiando su capacidad de escalado en el mercado nacional.
+          </p>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP2 - Grupo 5 - Gustavo Saucedo, Nicolás Cloos, Agustin Coria</span>
+        <span class="page-number">Página 4 de 5</span>
+      </footer>
+    </section>
+
+    <!-- ====================================================================
+         PÁGINA 5: SÍNTESIS INTERPRETATIVA & FUENTES
+         ==================================================================== -->
+    <section class="page" id="page-5">
+      <div class="page-content">
+        <div class="section-title">
+          <span>5. Síntesis Interpretativa</span>
+        </div>
+
+        <div class="sintesis-texto">
+          <p>
+            <strong>Ejes estructurantes y tensiones del caso.</strong> El desarrollo sociotécnico de Gran Sasso S.R.L. se asienta sobre dos pilares competitivos distintivos: la <strong>técnica y el conocimiento tecnológico (Eje 6)</strong>, reflejada en el dominio del curvado de multilaminado en prensas de alta frecuencia y la mecanización 3D multieje con brazo robótico; y su <strong>anclaje territorial en General San Martín (Eje 3)</strong>, articulando un tejido asociativo de talleres vecinos para la herrería y pintura electrostática a escala barrial. En contrapartida, las tensiones estructurales provienen de las <strong>políticas públicas (Eje 4)</strong>, ante la libre importación de muebles terminados que ingresan a precios desleales, y de los <strong>recursos humanos (Eje 5)</strong>, donde una alta polivalencia general convive con una severa fragilidad operativa: la fabricación integral de la línea de mesas recae de manera monopólica sobre un único operario sin relevo estandarizado.
+          </p>
+          <p>
+            <strong>Articulación entre la dimensión técnica y la dimensión social.</strong> Siguiendo el enfoque teórico de Bruno Pedro De Alto en <em>Tozuda Industria Nacional</em>, la técnica no constituye una variable autónoma de maquinarias aisladas, sino un proceso eminentemente social encarnado en los colectivos de trabajo. En Gran Sasso, los centros robotizados y el corte láser conviven estrechamente con el saber tácito de los operarios: el 70% de la fuerza laboral se capacita de forma empírica en planta, transmitiendo el oficio maderero intergeneracionalmente al pie de máquina (como evidencia el operario Diego en el sector de lijado). Asimismo, la empresa suple las limitaciones tecnológicas apelando a la destreza manual —como el corte de cueros con bisturí para esquivar las quemaduras del haz láser— y a lazos de confianza familiar y vecinal para la provisión de estructuras metálicas.
+          </p>
+          <p>
+            <strong>Condiciones de posibilidad históricas y desafíos futuros.</strong> La condición de posibilidad histórica radicó en la mutación intergeneracional: los dos hermanos reconvirtieron la carpintería artesanal de su padre en una manufactura seriada de diseño contemporáneo, traccionada por la comercialización digital directa a través de Meta y showrooms propios. Hacia adelante, la firma enfrenta tres imperativos clave de gestión fabril: 1) reconfigurar el layout de planta para suprimir los recorridos cruzados improductivos ("ir y venir"); 2) estandarizar mediante instructivos de proceso el ensamble de mesas para neutralizar el riesgo de dependencia monopersonal; y 3) consolidar el uso de moldes matriciales impresos en 3D para recortar drásticamente los tiempos y costos de desarrollo de nuevos monocascos curvados.
+          </p>
+          <p>
+            <strong>Aprendizajes para el Diseño Industrial y la Gestión Productiva.</strong> Para la práctica proyectual, el caso de Gran Sasso demuestra que diseñar para la industria nacional demanda una internalización lúcida de las condiciones materiales reales del taller: entender la orientación de fibras para evitar roturas en la prensa de alta frecuencia, proyectar contemplando el límite de desbaste en chapas nobles de 0,7 mm para no arruinarlas en el acabado, y optimizar el despiece en función del corte láser y la matricería local. La gestión industrial eficaz no reside en emular esquemas teóricos abstractos, sino en sincronizar creativamente la tecnología de vanguardia disponible con las capacidades humanas y la red territorial circundante, gestando un sistema productivo resiliente, flexible y sustentable.
+          </p>
+        </div>
+
+        <!-- Fuentes y Referencias Consultadas -->
+        <div class="section-title" style="margin-top: 5px;">
+          <span>6. Fuentes y Referencias Consultadas</span>
+        </div>
+
+        <div class="fuentes-container">
+          <ul class="fuentes-list">
+            <li><strong>Entrevistas y relevamiento de campo en planta (Bouchard 3870, San Andrés):</strong> Entrevistas en profundidad y recorrido de procesos con <strong>Mauro</strong> (socio propietario y encargado de planta), abordando organización laboral, tecnología de curvado en alta frecuencia, mecanizado robótico, logística barrial, comercio exterior y financiamiento; y con <strong>Diego</strong> (operario de planta), sobre capacitación empírica, rotación de puestos y trabajo de acabado en lijado.</li>
+            <li><strong>Fuentes directas de la firma:</strong> Catálogo técnico de sillas, mesas y banquetas; tienda virtual oficial (gransassosrl.com) y canales comerciales digitales de Gran Sasso.</li>
+            <li><strong>Entorno productivo y territorial:</strong> Municipio de Gral. San Martín — Datos del entramado maderero y metalúrgico local; cámaras sectoriales FAIMA y CEMA (informes de coyuntura y aranceles).</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <footer class="doc-footer">
+        <span>TP2 - Grupo 5 - Gustavo Saucedo, Nicolás Cloos, Agustin Coria</span>
+        <span class="page-number">Página 5 de 5</span>
+      </footer>
+    </section>
+
+  </div>
+
+</body>
+</html>
